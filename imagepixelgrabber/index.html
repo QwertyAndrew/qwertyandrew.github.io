@@ -1,13 +1,41 @@
+<!-- Me when no comment huh -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Pixel Grabber</title>
+    <title>I.P.G</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
 </head>
+
 <body>
-    <h1>HELLO</h1>
+    <section class="screenA">
+        <img src="icon.png">
+        <h1>Image Pixel Grabber</h1>
+        <h2>Set any image to 1920x1920 resolution</h2>
+        <p>...and then you do stuff to it!</p>
+        <a id="browseLink">Browse an image manually here</a>
+    </section>
+    
+    <section class="screenB">
+        <canvas id="canvas"></canvas>
+
+        <!-- Buttons for, cool stuff i guess????????? -->
+        <div class="customisationBox">
+            <input type="number" id="chanceValue" min="1" max="100" value="35"/>
+            <button id="RowSort">Row Sort</button>
+            <button id="ColumnSort">Column Sort</button>
+            <button id="CenterCrop">Center Crop</button>
+            <button id="NoCrop">No Crop</button>
+        </div>
+
+        <!-- Basically export for roblox -->
+        <button id="exportButton">Export Pixel Data</button>
+        <a id="browseLink2">Browse another image</a>
+    </section>
+    
+    <input type="file" id="fileInput" accept="image/*">
 </body>
 </html>

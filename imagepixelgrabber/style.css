@@ -1,8 +1,210 @@
+/* CSS shenanigans here */
+/* I will not comment as much tho */
+
+/* GLOBAL STUFF */
+:root{
+    --text: rgb(214, 245, 252);
+    --background: rgb(3, 31, 33);
+    --primary: rgb(125, 235, 244);
+    --secondary: rgb(31, 13, 161);
+    --accent: rgb(143, 32, 237);
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: gray;
+    background-color: var(--background);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* SCREEN A SPECIFICALLY */
+.screenA{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.screenA > *{
+    margin-bottom: 2vmin;
+    text-align: center;
+}
+
+.screenA > img{
+    position: absolute;
+    z-index: -10;
+    rotate: 10deg;
+    height: 60vmin;
+    width: auto;
+    aspect-ratio: 1/1;
+    opacity: 0.1;
+}
+
+.dragndropArea{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* background-color: rgba(143, 32, 237, 0.1);
+    backdrop-filter: blur(0vmin); */
+}
+
+h1, h2, p, a{
+    color: var(--text);
+}
+
+h1{
+    font-size: 10vmin;
+    font-family: cursive;
+    font-weight: 100;
+}
+
+h2, p{
+    font-size: 6.18vmin;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+}
+
+p{
+    font-size: 2.36vmin;
+}
+
+#browseLink{
+    font-size: 3.81vmin;
+    color: var(--text);
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#browseLink2{
+    font-size: 2.36vmin;
+    color: var(--text);
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#browseLink:hover{
+    letter-spacing: 0.1vmin;
+}
+
+#browseLink:active{
+    letter-spacing: -0.01vmin;
+    transform: translateY(0.25vmin);
+}
+
+#browseLink2:hover{
+    letter-spacing: 0.1vmin;
+}
+
+#browseLink2:active{
+    letter-spacing: -0.01vmin;
+    transform: translateY(0.25vmin);
+}
+
+.fileInput{
+    position: absolute;
+    display: none;
+}
+
+/* SCREEN B SPECIFICALLY */
+.screenB{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#canvas{
+    height: 60vh;
+    width: auto;
+    border: thick double var(--primary);
+    border-radius: 1vmin;
+}
+
+.customisationBox{
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.customisationBox > *{
+    background-color: var(--secondary);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border: none;
+    padding: 1vmin 2vmin;
+    color: var(--text);
+    margin: 0 1vw;
+    font-size: 2.36vmin;
+    border-radius: 1vmin;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#chanceValue::-webkit-outer-spin-button,
+#chanceValue::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#chanceValue{
+    background-color: var(--accent);
+    width: 2vw;
+    text-align: center;
+}
+
+.customisationBox > *:hover{
+    transform: translateY(-0.5vmin);
+}
+
+.customisationBox > *:active{
+    transform: translateY(0.25vmin);
+    box-shadow: none;
+    filter:invert(100%);
+}
+
+#exportButton{
+    background-color: var(--primary);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border: none;
+    padding: 1vmin 2vmin;
+    color: black;
+    margin: 0 1vw;
+    font-size: 3.81vmin;
+    border-radius: 1vmin;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 1vmin;
+
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#exportButton:hover{
+    transform: translateY(-0.5vmin);
+}
+
+#exportButton:active{
+    transform: translateY(0.25vmin);
+    box-shadow: none;
+    filter:invert(100%);
 }
