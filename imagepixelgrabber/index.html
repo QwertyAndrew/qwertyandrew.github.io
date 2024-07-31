@@ -1,22 +1,29 @@
-<!-- Me when no comment huh -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Website information stuff -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I.P.G</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Image Pixel Sorter">
+    <meta property="og:description" content="A small, web-based thing, where it will do pixel sorting to your chosen image, based on pixel brightness.">
+    <meta property="og:image" content="./banner.png">
+    <meta property="og:url" content="https://qwertyandrew.github.io/imagepixelgrabber">
+    <meta property="og:type" content="website">
 </head>
 
 <body>
     <section class="screenA">
         <img src="./icon.png">
-        <h1>Image Pixel Grabber</h1>
-        <h2>Set any image to 1920x1920 resolution</h2>
-        <p>...and then you do stuff to it!</p>
-        <a id="browseLink">Browse an image manually here</a>
+        <h1>Image Pixel Sorter</h1>
+        <h2>Sort pixels from an image!</h2>
+        <p>uhhhhhh, yeah that's it :P</p>
+        <a id="browseLink">Browse image here!</a>
     </section>
     
     <section class="screenB">
@@ -27,12 +34,10 @@
             <input type="number" id="chanceValue" min="1" max="100" value="35"/>
             <button id="RowSort">Row Sort</button>
             <button id="ColumnSort">Column Sort</button>
-            <button id="CenterCrop">Center Crop</button>
-            <button id="NoCrop">No Crop</button>
         </div>
 
         <!-- Basically export for roblox -->
-        <button id="exportButton">Export Pixel Data</button>
+        <button id="exportButton">Save Image</button>
         <a id="browseLink2">Browse another image</a>
     </section>
     

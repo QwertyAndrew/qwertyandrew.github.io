@@ -1,59 +1,47 @@
+// Woo time to comments
+
 // VARIABLES
-let imageDataValue = null;
 let originalImageData = null;
-let cropMode = 'center';
-let lastImage = null;
+let randomValue = 0.35
+let sortedMode = null;
 
 let chanceInput = document.getElementById('chanceValue');
-let randomValue = 0.35
-
 const screenA = document.getElementsByClassName('screenA')[0];
 const screenB = document.getElementsByClassName('screenB')[0];
-const centerCrop = document.getElementById('CenterCrop');
-const noCrop = document.getElementById('NoCrop');
 const RowSort = document.getElementById('RowSort');
 const ColumnSort = document.getElementById('ColumnSort');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
 // SUB FUNCTIONS
+// This is for updating the random value thing, convert from percentage to 0 - 1
 function updateRandomValue() {
     randomValue = parseInt(chanceInput.value) / 100;
 }
 
-function cropAndResizeImage(img, width, height) {
-    // Clear image data first just in case :/
-    imageDataValue = null;
-
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
-
+// Render image, literally
+// It doesn't save to a server, it just render again using Canvas API
+function renderImage(img, width, height) {
+    // Make canvas
     canvas.width = width;
     canvas.height = height;
 
-    // Disable image smoothing for nearest-neighbor resampling
-    ctx.imageSmoothingEnabled = false;
+    // True for smoother render, false for pixel-ly render
+    ctx.imageSmoothingEnabled = true;
 
-    if (cropMode === 'center') {
-        // Center crop
-        const cropSize = Math.min(img.width, img.height);
-        const cropX = (img.width - cropSize) / 2;
-        const cropY = (img.height - cropSize) / 2;
+    // Render image
+    ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, width, height);
 
-        // Draw the cropped and resized image
-        ctx.drawImage(img, cropX, cropY, cropSize, cropSize, 0, 0, width, height);
-    } else {
-        // No crop
-        ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, width, height);
-    }
-
-    // Store the image data
-    imageDataValue = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    originalImageData = ctx.getImageData(0, 0, canvas.width, canvas.height); // Store the original image data
+    // Store the original image data
+    originalImageData = ctx.getImageData(0, 0, canvas.width, canvas.height); 
 }
 
+// When user send an image file
 function handleFileSelect(event) {
     let file;
     file = event.target.files[0];
     
+    // If it is an image, go for it
     if (file && file.type.match('image.*')) {
         screenA.style.display = "none";
         screenB.style.display = "flex";
@@ -65,55 +53,52 @@ function handleFileSelect(event) {
         reader.onload = function(e) {
             // Create the image 
             const img = new Image();
-            lastImage = img;
             img.src = e.target.result;
             img.onload = function() {
-                cropAndResizeImage(img, 1920, 1920);
+                renderImage(img, img.width, img.height);
             }
         };
         reader.readAsDataURL(file);
     }
 }
 
-function exportPixelData() {
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+// Exporting the image
+function exportImage() {
+    canvas.toBlob(function(blob) {
+        // Turn image into a URL
+        const url = URL.createObjectURL(blob);
 
-    const data = imageData.data;
-    let pixels = '[';
-    for (let i = 0; i < data.length; i += 4) {
-        const r = data[i];
-        const g = data[i + 1];
-        const b = data[i + 2];
-        const a = data[i + 3];
+        // Create an invisible link with the URL
+        const link = document.createElement('a');
+        link.href = url;
 
-        pixels += `[${r}, ${g}, ${b}, ${a}], `;
-    }
-      // Remove the last comma and space then close the array
-    pixels = pixels.slice(0, -2) + ']';
+        // Naming, based on what sorted
+        link.download = sortedMode + "_" + chanceInput.value + '%.png';
+        document.body.appendChild(link);
 
-    const blob = new Blob([pixels], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'pixelData.txt';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+        // Link clicked automatically to download
+        link.click();
+        document.body.removeChild(link);
+    }, 'image/png');
 }
 
+// Row sorting
 function sortPixelsByRows(imageData, sortChance = 1.0) {
+    // Get the width height
     const width = imageData.width;
     const height = imageData.height;
     const data = imageData.data;
     const sortedData = new Uint8ClampedArray(data.length);
+    sortedMode = "rowSorted"
 
+    // For each row...
     for (let y = 0; y < height; y++) {
-        // Extract row pixels
+        // Make an empty array first
         let rowPixels = [];
+
+        // For each pixels in that row...
         for (let x = 0; x < width; x++) {
+            // Grab the index, and data information from the pixel
             const index = (y * width + x) * 4;
             const r = data[index];
             const g = data[index + 1];
@@ -121,9 +106,11 @@ function sortPixelsByRows(imageData, sortChance = 1.0) {
             const a = data[index + 3];
             rowPixels.push({ r, g, b, a });
         }
-
+        // Okay we got the original pixel array
         // Sort row pixels by brightness
+
         rowPixels.sort((a, b) => {
+            // There is a chance that the pixel skipped the sorting progress
             if (Math.random() < sortChance) {
                 // Sort row pixels by brightness
                 const brightnessA = 0.3 * a.r + 0.59 * a.g + 0.11 * a.b;
@@ -132,7 +119,6 @@ function sortPixelsByRows(imageData, sortChance = 1.0) {
             }
         });
         
-
         // Place sorted row pixels back
         for (let x = 0; x < width; x++) {
             const index = (y * width + x) * 4;
@@ -148,11 +134,13 @@ function sortPixelsByRows(imageData, sortChance = 1.0) {
     return new ImageData(sortedData, width, height);
 }
 
+// Column sorting, basically like row but now it is vertical
 function sortPixelsByColumns(imageData, sortChance = 1.0) {
     const width = imageData.width;
     const height = imageData.height;
     const data = imageData.data;
     const sortedData = new Uint8ClampedArray(data.length);
+    sortedMode = "columnSorted"
 
     for (let x = 0; x < width; x++) {
         // Extract column pixels
@@ -192,6 +180,7 @@ function sortPixelsByColumns(imageData, sortChance = 1.0) {
     return new ImageData(sortedData, width, height);
 }
 
+// Plays when sort buttons clicked
 function applyPixelSort(sortType) {
     if (!originalImageData) {
         alert('No image data available');
@@ -206,37 +195,27 @@ function applyPixelSort(sortType) {
     }
 
     // Draw the sorted image data onto the canvas
-    const ctx = document.getElementById('canvas').getContext('2d');
     ctx.putImageData(sortedImageData, 0, 0);
 }
 
 // MAIN FUNCTION
+// When browse link clicked
 document.getElementById('browseLink').addEventListener('click', function() {
     document.getElementById('fileInput').click();
 });
 
+// When the second browse link clicked
 document.getElementById('browseLink2').addEventListener('click', function() {
     document.getElementById('fileInput').click();
 });
 
+// When a file put in
 document.getElementById('fileInput').addEventListener('change', handleFileSelect, false);
-document.getElementById('exportButton').addEventListener('click', exportPixelData, false);
 
-// Add event listeners for crop buttons
-centerCrop.addEventListener('click', function() {
-    cropMode = 'center';
-    if (lastImage) {
-        cropAndResizeImage(lastImage, 1920, 1920);
-    }
-});
+// When save image button clicked
+document.getElementById('exportButton').addEventListener('click', exportImage, false);
 
-noCrop.addEventListener('click', function() {
-    cropMode = 'noCrop';
-    if (lastImage) {
-        cropAndResizeImage(lastImage, 1920, 1920);
-    }
-});
-
+// When row/column sorts clicked
 RowSort.addEventListener('click', function() {
     applyPixelSort('rows');
 }, false);
@@ -245,9 +224,8 @@ ColumnSort.addEventListener('click', function() {
     applyPixelSort('columns');
 }, false);
 
+// When chance input changes
 chanceInput.addEventListener('input', updateRandomValue);
 
-// The pixel sort and dynamic cropping was ChatGPT because I'm really dumb
-// But the compress and export made by me (it just Python version but ported)
-
-// FYI, try to change the 64 resolution to 1K - 4k resolution, it can be useful lol.
+// The pixel sort was made with help on ChatGPT, because I am stupid with math
+// But the image importation was made by me (it is literally ported from the Python code I wrote back in 2022)
