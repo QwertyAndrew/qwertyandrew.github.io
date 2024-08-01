@@ -2,6 +2,13 @@
 /* I will not comment as much tho */
 
 /* GLOBAL STUFF */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 :root{
     --text: rgb(214, 245, 252);
     --background: rgb(3, 31, 33);
@@ -130,73 +137,156 @@ p{
     justify-content: center;
 }
 
+.leftSide{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 75vw;
+    background-color: rgb(1, 16, 17);
+    padding: 2vmin;
+    border-radius: 1vmin;
+}
+
+.settingBox{
+    width: 100%;
+}
+
+.allSettingBox{
+    display: flex;
+    margin-bottom: 1vh;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.allSettingBox > button {
+    background-color: var(--secondary);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border: none;
+    margin-right: 0.5vw;
+    margin-top: 0.5vh;
+    border-radius: 1vmin;
+    cursor: pointer;
+
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.allSettingBox > button:hover{
+    transform: translateY(-0.5vmin);
+}
+
+.allSettingBox > button:active{
+    transform: translateY(0.25vmin);
+    box-shadow: none;
+}
+
+.allSettingBox > button > p{
+    padding: 1vmin 2vmin;
+    color: var(--text);
+    font-size: 2.36vmin;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.allSettingBox > button > img{
+    display: none;
+}
+
+.modeSelected{
+    filter: invert();
+    box-shadow: none;
+    letter-spacing: 0.5vmin;
+}
+
 #canvas{
     height: 60vmin;
     border: thick double var(--primary);
     border-radius: 1vmin;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    margin-bottom: 2vmin;
 }
 
-.customisationBox{
-    height: 10vh;
-    width: 100vw;
+.percentStartBox{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 1vmin 0;
+    justify-content: flex-start;
+    margin-top: 1vh;
 }
 
-.customisationBox > *{
+.startSortingBox{
+    margin-left: 5vmin;
+}
+
+.percentageBox > input{
     background-color: var(--secondary);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border: none;
-    padding: 1vmin 2vmin;
+    padding: 1vmin 3vmin;
     color: var(--text);
-    margin: 0 1vw;
     font-size: 2.36vmin;
     border-radius: 1vmin;
     cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 1vh 0;
+    text-align: center;
+
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#RowSort , #ColumnSort{
+    background-color: var(--secondary);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border: none;
+    padding: 0.5vmin 2vmin;
+    color: var(--text);
+    margin: 1vh 0;
+    margin-right: 0.5vw;
+    font-size: 2.36vmin;
+    border-radius: 1vmin;
+    cursor: pointer;
+    padding: 1vmin 2vmin;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-#chanceValue::-webkit-outer-spin-button,
-#chanceValue::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-#chanceValue{
-    font-size: 3.81vmin;
-    background-color: var(--accent);
-    width: 10vmin;
-    text-align: center;
-}
-
-.customisationBox > *:hover{
+.startSortingBox > button:hover{
     transform: translateY(-0.5vmin);
 }
 
-.customisationBox > *:active{
+.startSortingBox > button:active{
     transform: translateY(0.25vmin);
     box-shadow: none;
-    filter:invert(100%);
+}
+
+.percentageBox > input:hover{
+    transform: translateY(-0.5vmin);
+}
+
+.percentageBox > input:active{
+    transform: translateY(0.25vmin);
+    box-shadow: none;
+}
+
+.savingBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2vmin;
 }
 
 #exportButton{
     background-color: var(--primary);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border: none;
-    padding: 1vmin 2vmin;
+    padding: 0.5vmin 1vmin;
     color: black;
-    margin: 0 1vw;
+    margin-right: 1vw;
     font-size: 3.81vmin;
     border-radius: 1vmin;
     cursor: pointer;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-bottom: 1vmin;
 
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -209,4 +299,37 @@ p{
     transform: translateY(0.25vmin);
     box-shadow: none;
     filter:invert(100%);
+}
+
+/* SCREEN C, for waiting screen */
+.screenC{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(91, 91, 91, 0.5) 100%);
+    backdrop-filter: blur(10vmin);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.warningText{
+    transform: translateY(5vh);
+    transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.showScreenC{
+    visibility: visible;
+    opacity: 1;
+}
+
+.showScreenCText{
+    transform: translateY(0vh);
 }

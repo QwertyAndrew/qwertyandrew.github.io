@@ -11,7 +11,7 @@
 
     <!-- Open Graph meta tags -->
     <meta property="og:title" content="Image Pixel Sorter">
-    <meta property="og:description" content="A small, web-based tool for pixel sorting images based on pixel brightness.">
+    <meta property="og:description" content="A small, web-based tool for row/column pixel sorting images based on a lot of things.">
     <meta property="og:image" content="https://qwertyandrew.github.io/imagePixelSorter/websiteBanner.png">
     <meta property="og:url" content="https://qwertyandrew.github.io/imagePixelSorter/">
     <meta property="og:type" content="website">
@@ -28,19 +28,108 @@
     
     <section class="screenB">
         <canvas id="canvas"></canvas>
+        <section class="leftSide">
 
-        <!-- Buttons for, cool stuff i guess????????? -->
-        <div class="customisationBox">
-            <input type="number" id="chanceValue" min="1" max="100" value="35"/>
-            <button id="RowSort">Row Sort</button>
-            <button id="ColumnSort">Column Sort</button>
-        </div>
+            <!-- Buttons for, cool stuff i guess????????? -->
+            <div class="settingBox">
+                <p>Sorting method (Default is Hue):</p>
+                <div class="allSettingBox">
+                    <button id="HueMode">
+                        <p>Hue</p>
+                        <img src="">
+                    </button>
 
-        <!-- Basically export for roblox -->
-        <button id="exportButton">Save Image</button>
-        <a id="browseLink2">Browse another image</a>
+                    <button id="SatMode">
+                        <p>Saturation</p>
+                        <img src="">
+                    </button>
+
+                    <button id="LightMode">
+                        <p>Lightness</p>
+                        <img src="">
+                    </button>
+
+                    <button id="RedMode">
+                        <p>Red</p>
+                        <img src="">
+                    </button>
+
+                    <button id="GreenMode">
+                        <p>Green</p>
+                        <img src="">
+                    </button>
+
+                    <button id="BlueMode">
+                        <p>Blue</p>
+                        <img src="">
+                    </button>
+
+                    <button id="IntenseMode">
+                        <p>Intensity</p>
+                        <img src="">
+                    </button>
+
+                    <button id="ValueMode">
+                        <p>Value</p>
+                        <img src="">
+                    </button>
+
+                    <button id="LuminanceMode">
+                        <p>Luminance</p>
+                        <img src="">
+                    </button>
+
+                    <button id="DistanceFromBlackMode">
+                        <p>Distance</p>
+                        <img src="">
+                    </button>
+
+                    <button id="RedGreenDiffMode">
+                        <p>Red ≠ Green</p>
+                        <img src="">
+                    </button>
+                    <button id="BlueRedDiffMode">
+                        <p>Blue ≠ Red</p>
+                        <img src="">
+                    </button>
+                    <button id="ColorfulnessMode">
+                        <p>Colorfulness</p>
+                        <img src="">
+                    </button>
+                    <button id="RandomMode">
+                        <p>Random</p>
+                        <img src="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="percentStartBox">
+                <div class="percentageBox">
+                    <p>Percentage (0-100):</p>
+                    <input type="number" id="chanceValue" min="1" max="100" value="35"/>
+                </div>
+                
+                <div class="startSortingBox">
+                    <p>
+                        Start sorting on:
+                    </p>
+                    <button id="RowSort">Rows</button>
+                    <button id="ColumnSort">Columns</button>
+                </div>
+            </div>
+
+            <!-- Basically saving the image -->
+             <div class="savingBox">
+                 <button id="exportButton">Save Image</button>
+                 <a id="browseLink2">Browse another image</a>
+             </div>
+
+        </section>
     </section>
     
+    <section class="screenC">
+        <h2 class="warningText">Processing...</h2>
+    </section>
     <input type="file" id="fileInput" accept="image/*">
 </body>
 </html>

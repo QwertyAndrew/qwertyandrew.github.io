@@ -3,21 +3,131 @@
 // VARIABLES
 let originalImageData = null;
 let randomValue = 0.35
-let sortedMode = null;
+let rowOrColumn = null;
+let sortingMode = 'hue';
 
 let chanceInput = document.getElementById('chanceValue');
 const screenA = document.getElementsByClassName('screenA')[0];
 const screenB = document.getElementsByClassName('screenB')[0];
+const screenC = document.getElementsByClassName("screenC")[0];
+const screenCText = document.getElementsByClassName("warningText")[0];
+
+// Much useful and clean
+const modeButtons = {
+    'hue': document.getElementById('HueMode'),
+    'saturation': document.getElementById('SatMode'),
+    'lightness': document.getElementById('LightMode'),
+    'red': document.getElementById('RedMode'),
+    'green': document.getElementById('GreenMode'),
+    'blue': document.getElementById('BlueMode'),
+    'intensity': document.getElementById('IntenseMode'),
+    'value': document.getElementById('ValueMode'),
+    'luminance': document.getElementById('LuminanceMode'),
+    'distanceFromBlack': document.getElementById('DistanceFromBlackMode'),
+    'redGreenDifference': document.getElementById('RedGreenDiffMode'),
+    'blueRedDifference': document.getElementById('BlueRedDiffMode'),
+    'colorfulness': document.getElementById('ColorfulnessMode'),
+    'random': document.getElementById('RandomMode'),
+};
+
+let previousMode = modeButtons['hue'];
+
 const RowSort = document.getElementById('RowSort');
 const ColumnSort = document.getElementById('ColumnSort');
+
 const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext('2d', { willReadFrequently: true });
 
 // SUB FUNCTIONS
 // This is for updating the random value thing, convert from percentage to 0 - 1
 function updateRandomValue() {
     randomValue = parseInt(chanceInput.value) / 100;
 }
+
+// Function to update the selected mode button
+function updateModeSelection(newMode) {
+    if (previousMode) {
+        previousMode.classList.remove("modeSelected");
+    }
+    newMode.classList.add("modeSelected");
+    previousMode = newMode;
+}
+
+// Basic show/hide screen c function
+function showScreenC(text) {
+    screenC.classList.add('showScreenC');
+    screenCText.classList.add("showScreenCText");
+    screenCText.innerHTML = text;
+}
+
+function hideScreenC() {
+    screenC.classList.remove('showScreenC');
+    screenCText.classList.remove("showScreenCText");
+}
+
+// RGB to HSL
+// Source: https://gist.github.com/mjackson/5311256
+// And of course ChatGPT because this is so math-y
+function rgbToHsl(r, g, b) {
+    r /= 255;
+    g /= 255;
+    b /= 255;
+    
+    const max = Math.max(r, g, b);
+    const min = Math.min(r, g, b);
+    let h, s, l = (max + min) / 2;
+
+    if (max === min) {
+        // It's achromatic
+        h = s = 0;
+    } else {
+        const d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+
+        switch (max) {
+            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+            case g: h = (b - r) / d + 2; break;
+            case b: h = (r - g) / d + 4; break;
+        }
+
+        h /= 6;
+    }
+
+    return [h, s, l];
+}
+
+// RGB to HSV
+// no clue about this one so i googled up
+function rgbToHsv(r, g, b) {
+    r /= 255;
+    g /= 255;
+    b /= 255;
+    
+    const max = Math.max(r, g, b);
+    const min = Math.min(r, g, b);
+    const delta = max - min;
+    let h, s, v = max;
+
+    if (max === 0) {
+        s = 0;
+    } else {
+        s = delta / max;
+    }
+
+    if (delta === 0) {
+        h = 0;
+    } else {
+        switch (max) {
+            case r: h = (g - b) / delta + (g < b ? 6 : 0); break;
+            case g: h = (b - r) / delta + 2; break;
+            case b: h = (r - g) / delta + 4; break;
+        }
+        h /= 6;
+    }
+
+    return [h, s, v];
+}
+
 
 // Render image, literally
 // It doesn't save to a server, it just render again using Canvas API
@@ -40,30 +150,36 @@ function renderImage(img, width, height) {
 function handleFileSelect(event) {
     let file;
     file = event.target.files[0];
+    showScreenC("Adding image...")
     
-    // If it is an image, go for it
-    if (file && file.type.match('image.*')) {
-        screenA.style.display = "none";
-        screenB.style.display = "flex";
-
-        // Read the file
-        const reader = new FileReader();
-
-        // When done reading, load the function
-        reader.onload = function(e) {
-            // Create the image 
-            const img = new Image();
-            img.src = e.target.result;
-            img.onload = function() {
-                renderImage(img, img.width, img.height);
-            }
-        };
-        reader.readAsDataURL(file);
-    }
+    setTimeout(() => {
+        // If it is an image, go for it
+        if (file && file.type.match('image.*')) {
+            screenA.style.display = "none";
+            screenB.style.display = "flex";
+    
+            // Read the file
+            const reader = new FileReader();
+    
+            // When done reading, load the function
+            reader.onload = function(e) {
+                // Create the image 
+                const img = new Image();
+                img.src = e.target.result;
+                img.onload = function() {
+                    renderImage(img, img.width, img.height);
+                    hideScreenC()
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+    }, 100);
 }
 
 // Exporting the image
 function exportImage() {
+    showScreenC("Exporting...");
+
     canvas.toBlob(function(blob) {
         // Turn image into a URL
         const url = URL.createObjectURL(blob);
@@ -73,32 +189,73 @@ function exportImage() {
         link.href = url;
 
         // Naming, based on what sorted
-        link.download = sortedMode + "_" + chanceInput.value + '%.png';
+        link.download = rowOrColumn + "_" + sortingMode + "_" + chanceInput.value + '%.png';
         document.body.appendChild(link);
 
         // Link clicked automatically to download
         link.click();
         document.body.removeChild(link);
+        hideScreenC();
     }, 'image/png');
 }
 
-// Row sorting
-function sortPixelsByRows(imageData, sortChance = 1.0) {
-    // Get the width height
+function getSortingValue(pixel, mode, enableLogging = false) {
+    const [h, s, l] = rgbToHsl(pixel.r, pixel.g, pixel.b);
+    if (enableLogging) {
+        console.log(mode);
+    }
+
+    switch (mode) {
+        case 'hue': 
+            return h;
+        case 'saturation': 
+            return s;
+        case 'lightness': 
+            return l;
+        case 'red': 
+            return pixel.r;
+        case 'green': 
+            return pixel.g;
+        case 'blue': 
+            return pixel.b;
+        case 'intensity': 
+            return pixel.r + pixel.g + pixel.b;
+        case 'value': 
+            return rgbToHsv(pixel.r, pixel.g, pixel.b)[2];
+        case 'luminance': 
+            return 0.2126 * pixel.r + 0.7152 * pixel.g + 0.0722 * pixel.b;
+        case 'distanceFromBlack': 
+            return Math.sqrt(pixel.r * pixel.r + pixel.g * pixel.g + pixel.b * pixel.b);
+        case 'redGreenDifference': 
+            return pixel.r - pixel.g;
+        case 'blueRedDifference': 
+            return pixel.b - pixel.r;
+        case 'colorfulness': {
+            const mean = (pixel.r + pixel.g + pixel.b) / 3;
+            return Math.sqrt(
+                (pixel.r - mean) * (pixel.r - mean) +
+                (pixel.g - mean) * (pixel.g - mean) +
+                (pixel.b - mean) * (pixel.b - mean)
+            );
+        }
+        case 'random': 
+            return Math.random();
+        default: 
+            return h;
+    }
+}
+
+
+function sortPixelsByRows(imageData, sortChance = 1.0, mode) {
     const width = imageData.width;
     const height = imageData.height;
     const data = imageData.data;
     const sortedData = new Uint8ClampedArray(data.length);
-    sortedMode = "rowSorted"
+    rowOrColumn = "row";
 
-    // For each row...
     for (let y = 0; y < height; y++) {
-        // Make an empty array first
         let rowPixels = [];
-
-        // For each pixels in that row...
         for (let x = 0; x < width; x++) {
-            // Grab the index, and data information from the pixel
             const index = (y * width + x) * 4;
             const r = data[index];
             const g = data[index + 1];
@@ -106,20 +263,15 @@ function sortPixelsByRows(imageData, sortChance = 1.0) {
             const a = data[index + 3];
             rowPixels.push({ r, g, b, a });
         }
-        // Okay we got the original pixel array
-        // Sort row pixels by brightness
 
         rowPixels.sort((a, b) => {
-            // There is a chance that the pixel skipped the sorting progress
             if (Math.random() < sortChance) {
-                // Sort row pixels by brightness
-                const brightnessA = 0.3 * a.r + 0.59 * a.g + 0.11 * a.b;
-                const brightnessB = 0.3 * b.r + 0.59 * b.g + 0.11 * b.b;
-                return brightnessA - brightnessB;
+                return getSortingValue(a, mode) - getSortingValue(b, mode);
             }
+            return 0;
         });
         
-        // Place sorted row pixels back
+
         for (let x = 0; x < width; x++) {
             const index = (y * width + x) * 4;
             const pixel = rowPixels[x];
@@ -130,20 +282,17 @@ function sortPixelsByRows(imageData, sortChance = 1.0) {
         }
     }
 
-    // Return new ImageData with sorted pixels
     return new ImageData(sortedData, width, height);
 }
 
-// Column sorting, basically like row but now it is vertical
-function sortPixelsByColumns(imageData, sortChance = 1.0) {
+function sortPixelsByColumns(imageData, sortChance = 1.0, mode) {
     const width = imageData.width;
     const height = imageData.height;
     const data = imageData.data;
     const sortedData = new Uint8ClampedArray(data.length);
-    sortedMode = "columnSorted"
+    rowOrColumn = "column";
 
     for (let x = 0; x < width; x++) {
-        // Extract column pixels
         let columnPixels = [];
         for (let y = 0; y < height; y++) {
             const index = (y * width + x) * 4;
@@ -154,18 +303,13 @@ function sortPixelsByColumns(imageData, sortChance = 1.0) {
             columnPixels.push({ r, g, b, a });
         }
 
-        // Sort column pixels by brightness
         columnPixels.sort((a, b) => {
             if (Math.random() < sortChance) {
-                // Sort row pixels by brightness
-                const brightnessA = 0.3 * a.r + 0.59 * a.g + 0.11 * a.b;
-                const brightnessB = 0.3 * b.r + 0.59 * b.g + 0.11 * b.b;
-                return brightnessA - brightnessB;
+                return getSortingValue(a, mode) - getSortingValue(b, mode);
             }
+            return 0;
         });
 
-
-        // Place sorted column pixels back
         for (let y = 0; y < height; y++) {
             const index = (y * width + x) * 4;
             const pixel = columnPixels[y];
@@ -176,26 +320,28 @@ function sortPixelsByColumns(imageData, sortChance = 1.0) {
         }
     }
 
-    // Return new ImageData with sorted pixels
     return new ImageData(sortedData, width, height);
 }
 
-// Plays when sort buttons clicked
 function applyPixelSort(sortType) {
     if (!originalImageData) {
         alert('No image data available');
         return;
     }
 
-    let sortedImageData;
-    if (sortType === 'rows') {
-        sortedImageData = sortPixelsByRows(originalImageData, randomValue);
-    } else if (sortType === 'columns') {
-        sortedImageData = sortPixelsByColumns(originalImageData, randomValue);
-    }
+    showScreenC(`Processing ${sortingMode} sort...`);
 
-    // Draw the sorted image data onto the canvas
-    ctx.putImageData(sortedImageData, 0, 0);
+    setTimeout(function() {
+        let sortedImageData;
+        if (sortType === 'rows') {
+            sortedImageData = sortPixelsByRows(originalImageData, randomValue, sortingMode);
+        } else if (sortType === 'columns') {
+            sortedImageData = sortPixelsByColumns(originalImageData, randomValue, sortingMode);
+        }
+
+        ctx.putImageData(sortedImageData, 0, 0);
+        hideScreenC();
+    }, 100);
 }
 
 // MAIN FUNCTION
@@ -226,6 +372,14 @@ ColumnSort.addEventListener('click', function() {
 
 // When chance input changes
 chanceInput.addEventListener('input', updateRandomValue);
+
+// Event listeners for sorting mode buttons
+for (const [mode, button] of Object.entries(modeButtons)) {
+    button.addEventListener('click', () => {
+        updateModeSelection(button);
+        sortingMode = mode;
+    });
+}
 
 // The pixel sort was made with help on ChatGPT, because I am stupid with math
 // But the image importation was made by me (it is literally ported from the Python code I wrote back in 2022)
