@@ -1,0 +1,656 @@
+/* --text: #f7fbfd;
+--background: #000000;
+--primary: #63b8d9;
+--secondary: #0d2a35;
+--accent: #3ea7d0; */
+/* cooool fonts */
+@font-face{
+    font-family: 'CyberDisplay';
+        src: url(fonts/CyberDisplay-VGvGx.woff) format('woff'),
+            url(fonts/CyberDisplay-VGvGx.woff2) format('woff2');
+}
+
+@font-face{
+    font-family: 'GamePaused';
+        src: url(fonts/GamepauseddemoRegular-RpmY6.woff) format('woff'),
+            url(fonts/GamepauseddemoRegular-RpmY6.woff2) format('woff2');
+}
+
+/* some general stuff here */
+body{
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    user-select: none;
+}
+
+/* Filters */
+.crt_effect_grid{
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(image/BlackBGPixel.png);
+    background-repeat: repeat;
+    background-size: 0.8vmin;
+    background-position: center;
+    z-index: 1000;
+
+    pointer-events: none;
+}
+
+.crt_effect_color{
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(2,0,36,0) 0%, rgba(0,0,0,1) 100%), url(image/ColorBGPixel.png);
+    background-repeat: repeat;
+    background-size: 0.8vmin;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 1001;
+
+    pointer-events: none;
+}
+
+/* really good source for static noise: https://codepen.io/iceable/pen/yLBrZOd */
+.static_noise{
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url(image/noiseTexture.png) repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .2s infinite;
+    z-index: 999;
+    pointer-events: none;
+    filter: invert(100%);
+    mix-blend-mode: color-dodge;
+}
+
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+}
+
+/* the menu screen */
+.main_screen{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(23,1,45,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.title_game{
+    color: #f7fbfd;
+    font-family: "CyberDisplay";
+    font-weight: 100;
+    font-size: 20vmin;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0px 0px 0.5vh #f7fbfd;
+
+    transition: all 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.subtitle_game{
+    color: #f7fbfd;
+    font-family: "GamePaused";
+    font-weight: 100;
+    font-size: 7.6vmin;
+    margin: 0;
+    transform: translate(0, -7.5vh);
+    width: auto;
+    text-align: center;
+    opacity: 0.25;
+
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.menu_button_section{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#menu_button{
+    color: #f7fbfd;
+    border: none;
+    padding: 0 2vw;
+    font-family: "GamePaused";
+    opacity: 1;
+    margin-bottom: 2vh;
+    transform: translate();
+
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    
+    cursor: pointer;
+}
+
+#menu_button:hover{
+    filter: invert(100%);
+}
+
+#menu_button:active{
+    scale: 0.9;
+}
+
+.start{
+    background-color: #7326C0;
+    font-size: 7.6vmin;
+}
+
+.about{
+    background-color: #330363;
+    font-size: 5vmin;
+}
+
+.credit{
+    background-color: #06012d;
+    font-size: 5vmin;
+}
+
+.quit{
+    background-color: #9c0000;
+    font-size: 5vmin;
+}
+
+.back{
+    position: absolute;
+    z-index: 1;
+    color: #f7fbfd;
+    border: none;
+    border-radius: 1vh;
+    padding: 0 2vw;
+    font-family: "GamePaused";
+    transform: translate(-10vw,0);
+    cursor: pointer;
+    background-color: #6e00ff;
+    font-size: 5vmin;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    opacity: 0;
+
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.back:hover{
+    scale: 1.1;
+    filter: invert(100%);
+}
+
+.back:active{
+    scale: 0.9;
+}
+
+/* about screen */
+.about_screen{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(2vh) brightness(0.25);
+
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about_description{
+    color: #00ffaa;
+    width: 75vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    font-size: 5.7vmin;
+    text-align: center;
+}
+
+.duration{
+    color: #00e1ff;
+    font-family: "CyberDisplay";
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    font-size: 8.6526vmin;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.duration:hover{
+    scale: 0.9;
+    letter-spacing: 0.5vw;
+}
+
+.about_back{
+    color: #f7fbfd;
+    border: none;
+    border-radius: 1vh;
+    padding: 0 2vw;
+    font-family: "GamePaused";
+    transform: translate(0,0);
+    cursor: pointer;
+    background-color: #780081;
+    font-size: 5vmin;
+    margin: 0;
+    opacity: 1;
+
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about_back:hover{
+    scale: 1.1;
+    filter: invert(100%);
+}
+
+.about_back:active{
+    scale: 0.9;
+}
+
+/* credit screen  */
+.credit_screen{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(2vh) brightness(0.25);
+
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.title_credit{
+    color: #00e1ff;
+    font-family: "CyberDisplay";
+    font-weight: 100;
+    font-size: 20vmin;
+    margin: 0;
+    padding: 0;
+}
+
+.credit_screen > p{
+    color: #00e1ff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 4.5vmin;
+    width: 50vw;
+    margin: 0;
+    padding: 0;
+}
+
+.credit_screen > p > a{
+    color: #00e1ff;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 4.5vmin;
+    margin: 0;
+    padding: 0;
+}
+
+.credit_back{
+    color: #f7fbfd;
+    border: none;
+    border-radius: 1vh;
+    padding: 0 2vw;
+    font-family: "GamePaused";
+    transform: translate(0,0);
+    cursor: pointer;
+    background-color: #780081;
+    font-size: 5vmin;
+    margin: 0;
+    opacity: 1;
+
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.credit_back:hover{
+    scale: 1.1;
+    filter: invert(100%);
+}
+
+.credit_back:active{
+    scale: 0.9;
+}
+
+.quit_screen{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    opacity: 0;
+
+    transition: all 2s cubic-bezier(0.37, 0, 0.63, 1);
+}
+
+.final_text{
+    color: #E67832;
+    text-shadow: 0px 0px 2vh #E67832;
+    opacity: 0;
+    font-size: 5vmin;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    transition: all 2s cubic-bezier(0.37, 0, 0.63, 1);
+}
+/* start screen */
+.start_screen{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.start_screen > li{
+    margin-bottom: 2vh;
+    width: 0;
+    padding: 0.5vh 1vw;
+    text-align: right;
+    list-style-type: none;
+    font-family: "GamePaused";
+    font-weight: 100;
+    font-size: 7.6vmin;
+    color: #f7fbfd;
+    cursor: pointer;
+    text-shadow: 0px 0px 8px #000000;
+    opacity: 0;
+}
+
+.start_screen > li:hover{
+    scale: 1.1;
+}
+
+.start_screen > li:active{
+    scale: 0.99;
+}
+
+.Easy{
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(217,217,99,1) 100%);
+}
+
+.Hard{
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgb(62, 208, 184) 100%);
+}
+
+.Insane{
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgb(208, 62, 62) 100%);
+}
+
+.Endless{
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgb(208, 62, 191) 100%);
+}
+
+/* loading screen */
+.loading_screen{
+    position: absolute;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 12;
+    background-color: #000000;
+    opacity: 0;
+
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.loading_screen > p{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0.5;
+    font-family: 'CyberDisplay';
+    font-weight: 100;
+    font-size: 7.6vmin;
+    letter-spacing: 0;
+
+    transition: all 2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.mode_name{
+    padding: 0;
+    margin: 0;
+    margin-top: -12vh;
+    font-family: 'CyberDisplay';
+    font-weight: 100;
+    font-stretch: extra-expanded;
+    font-size: 50vmin;
+    opacity: 0.1;
+
+    transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* game over screen */
+/* for EASY HARD INSANE */
+.game_over_screen{
+    position: absolute;
+    backdrop-filter: brightness(0.5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 11;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#game_over_buttons{
+    color: #f7fbfd;
+    border: none;
+    padding: 0 2vw;
+    opacity: 1;
+    margin-bottom: 2vh;
+    transform: translate(0, 0);
+    font-size: 6.7vmin;
+    font-family: 'GamePaused';
+    border-style: none;
+    transform: translate(0, -4vh);
+    opacity: 0;
+
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    
+    cursor: pointer;
+}
+
+#game_over_buttons:hover{
+    filter: invert(100%);
+}
+
+#game_over_buttons:active{
+    scale: 0.9;
+}
+
+.game_over_text{
+    color: rgb(255, 0, 0);
+    margin: 0;
+    padding: 0;
+    font-family: 'CyberDisplay';
+    font-weight: 100;
+    font-size: 25vmin;
+}
+
+.progress{
+    color: rgb(255, 0, 0);
+    margin: 0;
+    padding: 0;
+    font-family: 'CyberDisplay';
+    font-weight: 100;
+    font-size: 15.4vmin;
+    margin-top: -11vh;
+}
+
+.retry{
+    background-color: #9c0000;
+}
+
+.back_menu{
+    background-color: #06012d;
+}
+
+/* win screen */
+.win_screen{
+    position: absolute;
+    backdrop-filter: brightness(0.5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 11;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.win_text{
+    background: -webkit-linear-gradient(#d9d963, #004b01);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 1vh #00ffaa;
+    margin: 0;
+    padding: 0;
+    font-family: 'CyberDisplay';
+    font-weight: 100;
+    font-size: 25vmin;
+    letter-spacing: 0;
+
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#win_button{
+    color: #f7fbfd;
+    border: none;
+    padding: 0 2vw;
+    opacity: 1;
+    margin-bottom: 2vh;
+    transform: translate(0, 0);
+    font-size: 6.7vmin;
+    font-family: 'GamePaused';
+    border-style: none;
+    transform: translate(0, -4vh);
+    opacity: 0;
+
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    
+    cursor: pointer;
+}
+
+.win_retry{
+    background-color: #330075;
+}
+
+.win_back_menu{
+    background-color: #06012d;
+}
+
+/* the board game */
+#gameDisplay{
+    position: relative;
+    background: radial-gradient(circle, rgba(13,42,53,1) 0%, rgb(6, 20, 25) 100%);
+    width: 100vmin;
+    height: 100vmin;
+    display: none;
+    grid-template-rows: repeat(41, 1fr);
+    grid-template-columns: repeat(41, 1fr);
+}
+
+.snake{
+    background-color: #3ea7d0;
+    border: 0.25vmin solid #000000;
+}
+
+.food{
+    background-color: #d9c963;
+    border: 0.25vmin solid #000000;
+    border-radius: 100%;
+}
+
+.score{
+    display: none;
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    opacity: 0.5;
+    font-family: "CyberDisplay";
+    font-size: 50vmin;
+    color: white;
+    mix-blend-mode: overlay;
+}
+
+.current_speed{
+    display: none;
+
+    color: #f7fbfd;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    opacity: 0.5;
+    font-family: "CyberDisplay";
+    font-size: 10vmin;
+    mix-blend-mode: overlay;
+}
+
+/* footer section */
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10000;
+}
+
+small {
+    color: #f7fbfd;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2vmin;
+    opacity: 0.5;
+    text-shadow: 0px 0px 0.5vh #f7fbfd;
+}

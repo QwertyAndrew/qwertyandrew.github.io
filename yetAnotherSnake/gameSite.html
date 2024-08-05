@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- i really need to check on a tutorial because i NEVER make a game using html + css + js before -->
+    <!-- this is a good one: https://youtu.be/QTcIXok9wNY?si=haipoB9sgEO4tpxh -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>YetAnotherSnake.js</title>
+        <link rel="stylesheet" href="gameStyle.css" />
+        <link rel="icon" href="image/Icon.ico">
+        <script src="./javascript/gameScript.js" defer type="module"></script>
+    </head>
+
+    <body>
+        <!-- menu screen here ig -->
+        <main class="main_screen">
+            <p class="title_game">
+                YetAnotherSnake<span style="color: #d9c963; text-shadow: 0px 0px 0.5vh #d9c963">.js</span>
+            </p>
+            <h2 class="subtitle_game">just another ordinary snake game</h2>
+
+            <menu class="menu_button_section">
+                <button class="start" id="menu_button">Start</button>
+                <button class="about" id="menu_button">About</button>
+                <button class="credit" id="menu_button">Credit</button>
+                <button class="quit" id="menu_button">Quit</button>
+            </menu>
+        </main>
+
+        <!-- start screen means that one screen contains 4 modes -->
+        <ul class="start_screen"></ul>
+
+        <!-- fake loading screen here -->
+        <section class="loading_screen">
+            <h1 class="mode_name"></h1>
+            <p class="loading_text">loading...</p>
+        </section>
+
+        <!-- game over screen here -->
+        <section class="game_over_screen">
+            <h1 class="game_over_text">DEATH</h1>
+            <h2 class="progress">Progress:</h2>
+            <button class="retry" id="game_over_buttons">Retry</button>
+            <button class="back_menu" id="game_over_buttons">Menu</button>
+        </section>
+
+        <!-- win screen here -->
+        <section class="win_screen">
+            <h1 class="win_text">VICTORY</h1>
+            <button class="win_retry" id="game_over_buttons">Retry</button>
+            <button class="win_back_menu" id="game_over_buttons">Menu</button>
+        </section>
+
+        <!-- about screen here, basically in the menu -->
+        <section class="about_screen">
+            <p class="about_description">
+                Welcome to <b>YetAnotherSnake.js</b>
+                <br/><br/>
+                This game was made for a JavaScript assignment. 
+                Technically, the requirement to finish this assignment is to add a game over event. 
+                However, my funny little silly brain said: 
+                "Cmon, try harder, why not making it better, both visually AND functionality even"
+            </p>
+
+            <time datetime="2023-11-17 17:41" class="duration">Start: 17 November, 2023</time>
+            <time datetime="2023-11-24 17:41" class="duration">End: 24 November, 2023</time>
+
+            <button class="about_back">Back</button>
+        </section>
+
+        <!-- credit screen here, im not that smart to make everything by my own so this is a must -->
+        <section class="credit_screen">
+            <h1 class="title_credit">Credit</h1>
+
+                <p>Due to the complexity of the original code, I don't know how to add graphics to it, nor change it mid-game. So I must follow a tutorial on YouTube. This <a href="https://youtu.be/QTcIXok9wNY?si=nUf16B0TOrzBbTJ8">video</a> basically helps me to make the game more modular.</p>
+
+                <br/><br/>
+
+                <p>Fonts use are <a href="https://www.fontspace.com/game-paused-font-f102167">Game Paused</a> and <a href="https://www.fontspace.com/cyber-display-font-f105187">Cyber Display</a></p>
+
+                <br/><br/>
+
+                <p>Noise effect originally from <a href="https://codepen.io/iceable/pen/yLBrZOd">Mathieu S. Codepen (@iceable)</a></p>
+
+                <button class="credit_back">Back</button>
+        </section>
+
+        <!-- quit screen, for fun -->
+        <section class="quit_screen">
+            <h1 class="final_text">It is now safe to turn off your computer.</h1>
+        </section>
+
+        <!-- back button from the start screen -->
+        <button class="back">Back</button>
+
+        <!-- this is for displaying scores, current speed, and the gameboard itself -->
+        <div id="gameDisplay"></div>
+        <h1 class="score">0</h1>
+        <aside class="current_speed">
+        </aside>
+
+        <!-- filterssssssssssss -->
+        <figure class="static_noise"></figure>
+        <figure class="crt_effect_grid"></figure>
+        <figure class="crt_effect_color"></figure>
+
+        <!-- footer stuff here, simple copyright thing? -->
+        <footer> 
+            <small>&copy; Copyright 2023, QA. All Rights Reserved</small> 
+        </footer>
+    </body>
+</html>
