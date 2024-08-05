@@ -40,6 +40,7 @@ body{
     background-size: 0.8vmin;
     background-position: center;
     z-index: 1000;
+    opacity: 0.5;
 
     pointer-events: none;
 }
