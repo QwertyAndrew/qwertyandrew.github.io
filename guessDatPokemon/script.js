@@ -13,6 +13,7 @@ const UIElements = {
     attemptValue: document.querySelector("#attemptValue"),
     scoreValue: document.querySelector("#scoreValue"),
     highscoreValue: document.querySelector("#highscoreValue"),
+    guessedPokemonStats: document.querySelector("#guessedPokemonStats"),
     pokemonSprite: document.querySelector(".pokemonSprite"),
     blurPokemonSprite: document.querySelector(".blurPokemonSprite"),
     userInputForm: document.querySelector(".userInputForm"),
@@ -55,7 +56,7 @@ let potentialPoint = 100;
 // all verdict list
 const allVerdictList = {
     guessed0: [
-        "you kinda suck...", 
+        "oof", 
         "maybe that's just unlucky, try again",
         "you either got the new pokemon, or not a fan of this series",
         "uhh, wanna binge watching pokemon some day?",
@@ -64,10 +65,10 @@ const allVerdictList = {
     ],
 
     guessed10: [
-        "at least you do know pokemon :/", 
-        "at least you're better than me?",
-        "off to a good start though, try again",
-        "try better next time...",
+        "you ain't bad after all", 
+        "at least you're better than me",
+        "good!",
+        "ooh nice try!",
     ],
     
     guessed100: [
@@ -87,7 +88,7 @@ const allVerdictList = {
     guessed1000: [
         "you're a pokedex machine!", 
         "remember to drink water, please?",
-        "how much memory do you have for this game?",
+        "how much memory do you have for this game...?",
         ":D?!",
         "you are actually insane..."
     ],
@@ -102,15 +103,15 @@ const allVerdictList = {
     
     score28700: [
         "i noticed you used up the attempts alot of times though, keep in mind, the less the attempts you have, the less score you will get when you guessed it right",
-        "score is too low though, but hey you beat the game, be proud :)",
-        `score can be higher, eh that's good enough!`,
+        "score is a bit low though, but hey you beat the game, be proud :)",
+        `score can be higher, but that's good enough!`,
         "i mean, you can flex with this score to everyone that's for sure!"
     ],
     
     score47150: [
         "ooh, not bad, good score, go flex it to your friends",
         "you totally sure using some attempts there, but not as much as I expected",
-        "good score! Could be better!"   
+        "good score, but could be better!"   
     ],
     
     score65600: [
@@ -122,13 +123,13 @@ const allVerdictList = {
     score84050: [
         "and the score is high as well?? You are a master!",
         "and the score is super high? Well done!",
-        "okay, you are very good at image recognition"
+        "okay, you are VERY good at image recognition"
     ],
     
     score102500: [
         "too good to be true...",
         "speechless!",
-        "omg ur basically as good as minh almost0 xddd"
+        "omg ur basically as good as my friend xdddd"
     ],
 }
 
@@ -139,6 +140,7 @@ function updateValues() {
     UIElements.attemptValue.innerHTML = `>attempts: ${attempts}`;
     UIElements.scoreValue.innerHTML = `>scores: ${scores}`;
     UIElements.highscoreValue.innerHTML = `>highscores: ${highscore}`;
+    UIElements.guessedPokemonStats.innerHTML = `>guessedPokemon: ${guessedPokemon} out of 1025`
 }
 
 // indicator flashing incorrect
@@ -215,7 +217,7 @@ function checkCorrect(userAnswer, chosenPokemon, chosenPokemonWithSpace) {
             UIElements.winScreenUI.style.display = "flex";
 
             UIElements.finalWinStatistic.innerHTML = `
-                >score: ${scores}
+                >scores: ${scores}
                 <br>
                 >highScore: ${highscore}
             `;
