@@ -144,5 +144,4 @@ dist
 # Ensure specific modules are committed
 !node_modules/three/
 !node_modules/three/**/*
-!node_modules/GLTFLoader/
-!node_modules/GLTFLoader/**/*
+!node_modules/three/examples/jsm/loaders/GLTFLoader.js
