@@ -1,11 +1,14 @@
-# Qwerty's web-based stuff here
+# I hate web developing with a passion
 
-Front-ends? Games?? Experimentals???? 
+So, here are my web projects for my university!! :D
 
-WTF?!
+## Games
+- [Guess Dat Pokemon](https://qwertyandrew.github.io/guessDatPokemon/)
+- [YetAnotherSnake.js](https://qwertyandrew.github.io/yetAnotherSnake/)
+- AuthenIt (currently working)
 
-1. [Image Pixel Sorter](https://qwertyandrew.github.io/imagePixelSorter/)
-2. [Guess Dat Pokemon](https://qwertyandrew.github.io/guessDatPokemon/)
-3. [YetAnotherSnake.js](https://qwertyandrew.github.io/yetAnotherSnake/)
-4. This is C.A.T (done, haven't added here yet)
-5. AuthenIt (currently working)
+## Tools
+- [Image Pixel Sorter](https://qwertyandrew.github.io/imagePixelSorter/)
+
+## Experiments
+- This is C.A.T (done, haven't added here yet)
