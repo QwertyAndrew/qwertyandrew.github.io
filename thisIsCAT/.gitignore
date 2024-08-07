@@ -141,4 +141,8 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
-# End of https://www.toptal.com/developers/gitignore/api/node
+# Ensure specific modules are committed
+!node_modules/three/
+!node_modules/three/**/*
+!node_modules/GLTFLoader/
+!node_modules/GLTFLoader/**/*
