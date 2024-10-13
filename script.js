@@ -36,13 +36,13 @@ let artworkDescriptionDict = {
     art7: `I remembered I follow a specific tutorial on how to make fractals using Blender, and this is how I made. For the wide shot, it's from Max Hay tutorial on cameras. Gives me demoscene vibes.`,
     art8: "This is for my sister, she noticed that I created a bunch of 3D arts and she request me to make her a wallpaper for her laptop! Her collegues even noticed and ask where did she get it from haha.",
     art9: "This is where I played with terrains and grass. Nothing much to say about it, looks cool.",
-    art10: `This is for the Semester 2 space week, and unfortunately my team member forgot to put the video in. It took me a whole night to create this animation and compositing it before the deadline. You can check the animation <a href="https://youtu.be/NXbY_4QwO7k?si=zryOSRhf8PIiKHsU">here</a>, if you want.`,
-    art11:
-        "Semester 1 stuff, it's from a background animation for the portfolio, I like the scene so I added this here.",
-    art12: `Based on what I have learned from Max Hay, I tried to make a cave with some structure inside it. Sadly it doesn't look right because the cave is a bit "void", but I like the structure. Geometry nodes are cool.`,
+    art10: `Based on what I have learned from Max Hay, I tried to make a cave with some structure inside it. Sadly it doesn't look right because the cave is a bit "void", but I like the structure. Geometry nodes are cool.`,
+    art11: `Dystopian 3D art stuff during Semester 3, really fun to make after a long Blender hiatus, shout out to Chris Brunne for helping me making this better!`,
+    art12: `I made this in Figma, to see if I can make cool graphic stuff in it, and it turns out okay actually! This is, officially, my lock screen wallpaper.`,
 
-    art13: `Dystopian 3D art stuff during Semester 3, really fun to make after a long Blender hiatus, shout out to Chris Brunne for helping me making this better!`,
-    art14: `I made this in Figma, to see if I can make cool graphic stuff in it, and it turns out okay actually! This is, officially, my lock screen wallpaper.`,
+    art13: `Semester 1 stuff, it's from a background animation for the portfolio, it's a bit old and some scenes aren't great.`,
+    art14: `This is for the Semester 2 space week, took me a whole night to create this animation and compositing it before the deadline. You can check the animation with sound design <a href="https://youtu.be/NXbY_4QwO7k?si=zryOSRhf8PIiKHsU">here</a>!`,
+    art15: `This is a background animation for Semester 2 Portfolio website, I use SheepIt to render this one animation at a time. You can check how it looks like in website <a href="https://www.youtube.com/watch?v=fh-6S7EmrOY">here</a>!`,
 };
 
 // specifically for the gradient boxes in lo
