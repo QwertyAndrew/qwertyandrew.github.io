@@ -150,30 +150,33 @@ function renderImage(img, width, height) {
 function handleFileSelect(event) {
     let file;
     file = event.target.files[0];
-    showScreenC("Adding image...")
-    
-    setTimeout(() => {
-        // If it is an image, go for it
-        if (file && file.type.match('image.*')) {
-            screenA.style.display = "none";
-            screenB.style.display = "flex";
-    
-            // Read the file
-            const reader = new FileReader();
-    
-            // When done reading, load the function
-            reader.onload = function(e) {
-                // Create the image 
-                const img = new Image();
-                img.src = e.target.result;
-                img.onload = function() {
-                    renderImage(img, img.width, img.height);
-                    hideScreenC()
-                }
-            };
-            reader.readAsDataURL(file);
-        }
-    }, 100);
+
+    if (file && file.type.match('image.*')) {
+        showScreenC("Adding image...")
+
+        setTimeout(() => {
+            // If it is an image, go for it
+            if (file && file.type.match('image.*')) {
+                screenA.style.display = "none";
+                screenB.style.display = "flex";
+        
+                // Read the file
+                const reader = new FileReader();
+        
+                // When done reading, load the function
+                reader.onload = function(e) {
+                    // Create the image 
+                    const img = new Image();
+                    img.src = e.target.result;
+                    img.onload = function() {
+                        renderImage(img, img.width, img.height);
+                        hideScreenC()
+                    }
+                };
+                reader.readAsDataURL(file);
+            }
+        }, 100);
+    }
 }
 
 // Exporting the image
