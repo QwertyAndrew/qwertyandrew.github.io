@@ -39,10 +39,10 @@ let artworkDescriptionDict = {
     art10: `Based on what I have learned from Max Hay, I tried to make a cave with some structure inside it. Sadly it doesn't look right because the cave is a bit "void", but I like the structure. Geometry nodes are cool.`,
     art11: `Dystopian 3D art stuff during Semester 3, really fun to make after a long Blender hiatus, shout out to Chris Brunne for helping me making this better!`,
     art12: `I made this in Figma, to see if I can make cool graphic stuff in it, and it turns out okay actually! This is, officially, my lock screen wallpaper.`,
-
-    art13: `Semester 1 stuff, it's from a background animation for the portfolio, it's a bit old and some scenes aren't great.`,
-    art14: `This is for the Semester 2 space week, took me a whole night to create this animation and compositing it before the deadline. You can check the animation with sound design <a href="https://youtu.be/NXbY_4QwO7k?si=zryOSRhf8PIiKHsU">here</a>!`,
-    art15: `This is a background animation for Semester 2 Portfolio website, I use SheepIt to render this one animation at a time. You can check how it looks like in website <a href="https://www.youtube.com/watch?v=fh-6S7EmrOY">here</a>!`,
+    art13: `After getting a denied from FORM in All Nighter Vol.10, I decided to create a cover art for my team. This is my first time doing mixed media, combining 3D art and digital painting. Kinda proud of this one!`,
+    art14: `Semester 1 stuff, it's from a background animation for the portfolio, it's a bit old and some scenes aren't great.`,
+    art15: `This is for the Semester 2 space week, took me a whole night to create this animation and compositing it before the deadline. You can check the animation with sound design <a href="https://youtu.be/NXbY_4QwO7k?si=zryOSRhf8PIiKHsU">here</a>!`,
+    art16: `This is a background animation for Semester 2 Portfolio website, I use SheepIt to render this one animation at a time. You can check how it looks like in website <a href="https://www.youtube.com/watch?v=fh-6S7EmrOY">here</a>!`,
 };
 
 // specifically for the gradient boxes in lo
