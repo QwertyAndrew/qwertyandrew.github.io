@@ -1,13 +1,4 @@
-# So, here are my web projects for my university!! :D
+# Welcome to my Portfolio Website Git Repo :3
+You can access the website [here](https://qwertyandrew.github.io)!
 
-or just personal projects.
-
-I will update this README in the future once a new website is built
-
-## Games
-- [Guess Dat Pokemon](https://qwertyandrew.github.io/guessDatPokemon/)
-- [YetAnotherSnake.js](https://qwertyandrew.github.io/yetAnotherSnake/)
-- AuthenIt (currently working)
-
-## Tools
-- [Image Pixel Sorter](https://qwertyandrew.github.io/imagePixelSorter/)
+© 2026 QwertyAndrew. All rights reserved.
