@@ -1,0 +1,38 @@
+[
+    {
+        "order": 2,
+        "image": "pokemon.png",
+        "title": "Guess Dat Pokemon",
+        "description": "A web-based game where you guess a randomly chosen Pokemon.",
+        "links": [
+            {
+                "text": "Website",
+                "url": "web/guessDatPokemon/index.html"
+            }
+        ]
+    },
+    {
+        "order": 3,
+        "image": "ips.png",
+        "title": "Image Pixel Sorter",
+        "description": "A small, web-based tool for row/column pixel sorting images.",
+        "links": [
+            {
+                "text": "Website",
+                "url": "web/imagePixelSorter/index.html"
+            }
+        ]
+    },
+    {
+        "order": 1,
+        "image": "snake.png",
+        "title": "YetAnotherSnake.js",
+        "description": "A snake web game in JavaScript.",
+        "links": [
+            {
+                "text": "Website",
+                "url": "web/yetAnotherSnake/index.html"
+            }
+        ]
+    }
+]

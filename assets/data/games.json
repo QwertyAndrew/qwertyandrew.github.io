@@ -1,0 +1,98 @@
+[
+    {
+        "order": 8,
+        "image": "tolr.png",
+        "title": "Tower of Literal Randomness",
+        "description": "A Roblox competitive multiplayer, tower platformer with random generation game, where players race upward for the highest score. Also a love letter to math.random().",
+        "links": [
+            {
+                "text": "Roblox",
+                "url": "https://www.roblox.com/games/80809896342264/Tower-of-Literal-Randomness"
+            }
+        ]
+    },
+    {
+        "order": 5,
+        "image": "bronzeridge.png",
+        "title": "The Night Train: Bronzeridge",
+        "description": "A showcase experience made in Roblox, based off The Night Train, canonically depicting the station of Bronzeridge.",
+        "links": [
+            {
+                "text": "Roblox",
+                "url": "https://www.roblox.com/games/135085261442408/The-Night-Train-Bronzeridge"
+            }
+        ]
+    },
+    {
+        "order": 4,
+        "image": "train.png",
+        "title": "The Night Train",
+        "description": "A showcase experience made in Roblox depicting a metro train, inspired by the Netherland's NS train and Hong Kong's MTR interior design.",
+        "links": [
+            {
+                "text": "Roblox",
+                "url": "https://www.roblox.com/games/7400709282/The-Night-Train"
+            }
+        ]
+    },
+    {
+        "order": 3,
+        "image": "apt.png",
+        "title": "The Apartment",
+        "description": "A showcase experience made in Roblox, mainly on the interior design of an apartment, inspired by the book Kitchen by Mahoko Yoshimoto.",
+        "links": [
+            {
+                "text": "Roblox",
+                "url": "https://www.roblox.com/games/8575989077/The-Apartment"
+            }
+        ]
+    },
+    {
+        "order": 6,
+        "image": "fourwing.png",
+        "title": "FourWing",
+        "description": "A showcase experience made in Roblox, present a chaotic dynamical systems with audio-play, inspired by Elttob's Generative Music.",
+        "links": [
+            {
+                "text": "Roblox",
+                "url": "https://www.roblox.com/games/125399063910160/FourWing"
+            }
+        ]
+    },
+    {
+        "order": 2,
+        "image": "wave.png",
+        "title": "wave.wav",
+        "description": "A feature showcase made in Roblox, this feature is now implemented in The Apartment. It's a sound visualizer based from the game Drive World.",
+        "links": [
+            {
+                "text": "Roblox",
+                "url": "https://www.roblox.com/games/17318530194/wave-wav"
+            }
+        ]
+    },
+    {
+        "order": 1,
+        "image": "rain.png",
+        "title": "rain.mp4",
+        "description": "A feature showcase made in Roblox, this feature is now implemented in The Night Train. It's a rain droplet on glass VFX, inspired by Z0LL's droplets effect in Shanyue.",
+        "links": [
+            {
+                "text": "Roblox",
+                "url": "https://www.roblox.com/games/15165764038/rain-mp4"
+            }
+        ]
+    },
+    {
+        "order": 7,
+        "image": "doggone.png",
+        "title": "Doggone",
+        "description": "A 2.5D local co-op platformer, play as 2 different dogs, solving puzzles using their own features / abilities.",
+        "links": [
+            {
+                "text": "itch.io",
+                "url": "https://qwertyandrew.itch.io/doggone"
+            }
+        ]
+    }
+]

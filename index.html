@@ -1,129 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QA's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="image/indexpage/qalogo.svg">
-    <script src="script.js" defer></script>
-
-    <!-- Open Graph meta tags -->
-    <meta property="og:title" content="QA's Portfolio">
-    <meta property="og:description" content="A portfolio showcasing my skills, such as Front-ends, 3D arts, Music, and game development!">
-    <meta property="og:image" content="https://qwertyandrew.github.io/image/websiteBanner.png">
-    <meta property="og:url" content="https://qwertyandrew.github.io/">
-    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css" />
 </head>
-    <body>
-        <!-- background gradient animation thing -->
-        <div class="gradienttop" id="gradientdiv"></div>
-        <div class="gradientbottom" id="gradientdiv"></div>
-        <div class="gradientLayer1" id="gradientdiv"></div>
-        <div class="gradientLayer2" id="gradientdiv"></div>
 
-        <!-- header stuff here -->
-        <header>
-            <section class="leftheader">
-                <a href="index.html" class="logo">
-                    <img src="image/indexpage/qalogo.svg" alt="">
+<body>
+    <!-- For mobile layout -->
+    <button class="menu-button" aria-label="Open navigation">
+        <img src="assets/images/icons/menu.svg" alt="">
+    </button>
+
+    <!-- Navigation bar on the left -->
+    <nav>
+        <ul>
+            <li>
+                <a href="#art" class="nav-link active">
+                    <div class="nav-link-indicator">
+                        <div class="nav-link-line"></div>
+                    </div>
+                    Works
                 </a>
-                <h1 class="currentpage">HOME</h1>
-            </section>
 
-            <picture class="menuicon">
-                <img src="image/indexpage/menucircle.svg" class="menucircle">
-                <div class="linebox">
-                    <img src="image/indexpage/line.svg" class="line1" id="line">
-                    <img src="image/indexpage/line.svg" class="line2" id="line">
-                    <img src="image/indexpage/line.svg" class="line3" id="line">
+                <ul class="nav-submenu">
+                    <li>
+                        <a href="#art" class="nav-sublink">Art</a>
+                        <div class="nav-sublink-indicator active">
+                            <div class="diamond"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#photos" class="nav-sublink">Photos</a>
+                        <div class="nav-sublink-indicator">
+                            <div class="diamond"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#games" class="nav-sublink">Games</a>
+                        <div class="nav-sublink-indicator">
+                            <div class="diamond"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#websites" class="nav-sublink">Websites</a>
+                        <div class="nav-sublink-indicator">
+                            <div class="diamond"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#music" class="nav-sublink">Music</a>
+                        <div class="nav-sublink-indicator">
+                            <div class="diamond"></div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="blog.html" class="nav-link">
+                    <div class="nav-link-indicator"></div>
+                    Blog
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html" class="nav-link">
+                    <div class="nav-link-indicator"></div>
+                    About
+                </a>
+            </li>
+        </ul>
+
+        <img class="navBGImage" alt="" />
+        <div class="line"></div>
+    </nav>
+
+    <main>
+        <section id="art" class="page active">
+            <div class="art-gallery gallery"></div>
+
+            <article class="detailed"> <!-- active or not -->
+                <button class="detailed-close" aria-label="Close image">
+                    X
+                </button>
+                <div class="content-container">
+                    <div class="media-container"></div>
+
+                    <div class="text-group">
+                        <h1></h1>
+                        <p></p>
+                    </div>
                 </div>
-                <h1 class="menutext">MENU</h1>
-
-            </picture>
-            <menu>
-                <nav>
-                    <a href="frontendhub.html">Front-ends</a>
-                    <a href="videogamehub.html">Video Games</a>
-                    <a href="https://soundcloud.com/qwertyandrew">Musics</a>
-                    <a href="artwork.html">Artworks</a>
-                </nav>
-            </menu>
-        </header>
-
-        <div class="backgroundblur"></div>
-
-        <!-- hero stuff here -->
-        <section class="hero">
-            <hgroup class="herotext">
-                <h1>
-                    Hello.
-                    <br/>
-                    I'm QA.
-                </h1>
-
-                <h2>
-                    Driven by <b>creativity</b>.
-                </h2>
-
-                <h3>
-                    Because a mindset of dedication and passion brings so much more joy!
-                </h3>
-
-                <p>
-                    (you can scroll down, btw)
-                </p>
-                
-                <p>
-                    (I will make a new portfolio website later, this one is just a placeholder for now)
-                </p>
-            </hgroup>
-
-            <video autoplay loop muted class="herovideo">
-                <source src="video/HeroPremultipliedMax.webm" type="video/webm">
-            </video>
+            </article>
         </section>
 
-        <!-- about me stuff here -->
-        <section class="aboutme">
-            <hgroup class="aboutmetext">
-                <h1>AboutMe()</h1>
-                <h2>QA stands for Quang Anh</h2>
-                <p>I like to make 3D arts, music, video games, and random websites!</p>
-                <p>Currently in an Internship at inMotion VR.</p>
-                <p>Trying to become an inspiring creative game designer!</p>
-            </hgroup>
+        <section id="photos" class="page">
+            <div class="photos-gallery gallery"></div>
+            <article class="detailed"> <!-- active or not -->
+                <button class="detailed-close" aria-label="Close image">
+                    X
+                </button>
+                <div class="content-container">
+                    <div class="media-container"></div>
 
-            <video autoplay loop muted class="aboutmevideo">
-                <source src="video/AboutMePremultipliedMax.webm" type="video/webm">
-            </video>
-              
+                    <div class="text-group">
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+            </article>
         </section>
 
-        <!-- the LOs -->
-        <section class="learningoutcomes" id="learningoutcomes">
-            <h1 class="lotitle">My awesome stuff</h1>
-            <div class="gradientforloflexbox"></div>
-            <div class="loflexbox">
-                <a href="frontendhub.html" id="lo">Front-ends Designs</a>
-                <a href="videogamehub.html" id="lo">Playable Creations</a>
-                <a href="https://soundcloud.com/qwertyandrew" id="lo">Strange Musics</a>
-                <a href="artwork.html" id="lo">Creative Artworks</a>
+        <section id="music" class="page">
+            <!-- 2 Sides, the left and the right side -->
+
+            <!-- LEFT SIDE -->
+            <div class="trackList">
+                <!-- Using a template provided in music.js -->
             </div>
-                <div class="LOdecobox" id="LOdecobox1"></div>
-                <div class="LOdecobox" id="LOdecobox2"></div>
-                <div class="LOdecobox" id="LOdecobox3"></div>
+
+            <!-- RIGHT SIDE -->
+            <div class="discContainer">
+                <!-- rotate the cd with "playing" -->
+                <div class="cd">
+                    <div class="cdOverlay"></div>
+                    <div class="cdShine"></div>
+                    <img src="assets/images/works/arts/samplicityicon.png" class="cdCover" alt="">
+                    <div class="middleCircle"></div>
+                    <div class="secMiddleCircle"></div>
+                    <div class="thirdMiddleCircle"></div>
+                </div>
+
+                <div class="cdBG">
+                    <svg viewBox="0 0 100 100">
+                        <defs>
+                            <path id="cdTextPath" d="M 50, 5
+                   a 45,45 0 1,1 0,90
+                   a 45,45 0 1,1 0,-90" />
+                        </defs>
+
+                        <g class="cdText cdText-default">
+                            <text>
+                                <textPath href="#cdTextPath" textLength="280">
+                                    PLEASE SELECT AN AUDIO! USE HEADPHONES! ദ്ദി(0⩊&lt;マ
+                                    PLEASE SELECT AN AUDIO! USE HEADPHONES! ദ്ദി(0⩊&lt;マ
+                                </textPath>
+                            </text>
+                        </g>
+
+                        <g class="cdText cdText-active-play">
+                            <text>
+                                <textPath href="#cdTextPath" textLength="280">
+                                    NOW PLAYING! USE HEADPHONES! TURN UP THE VOLUME!
+                                    NOW PLAYING! USE HEADPHONES! TURN UP THE VOLUME!
+                                </textPath>
+                            </text>
+                        </g>
+
+                        <g class="cdText cdText-active-pause">
+                            <text>
+                                <textPath href="#cdTextPath" textLength="280">
+                                    DISC READY! USE HEADPHONES! TURN UP THE VOLUME!
+                                    DISC READY! USE HEADPHONES! TURN UP THE VOLUME!
+                                </textPath>
+                            </text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
         </section>
 
-        <!-- contact n social media -->
-        <footer class="contactsocial">
-            <h1>Contact me!</h1>
-            <p>Email: anhlequang04@gmail.com</p>
-            <p>Discord: QwertyAndrew</p>
-            <p>BlueSky: <a href="https://bsky.app/profile/qwertyandrew.bsky.social">@qwertyandrew.bsky.social</a></p>
-            <div class="footerdeco" id="footerdecobig"></div>
-            <div class="footerdeco" id="footerdecosmall"></div>
-        </footer>
+        <section id="games" class="page">
+            <div class="games-gallery gallery">
 
-    </body>
+            </div>
+        </section>
+
+        <section id="websites" class="page">
+            <div class="websites-gallery gallery">
+
+            </div>
+        </section>
+    </main>
+
+    <script src="script/indexnavigation.js"></script>
+    <script src="script/mobilenavigation.js"></script>
+    <script src="script/gallery.js"></script>
+    <script src="script/music.js"></script>
+    <script src="script/gameweb.js"></script>
+</body>
+
 </html>

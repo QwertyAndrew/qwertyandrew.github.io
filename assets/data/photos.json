@@ -1,0 +1,50 @@
+[
+    {
+        "media": "alarm.webp",
+        "title": "Alarm",
+        "description": "Photograph taken in Germany.",
+        "format": "landscape",
+        "order": 1,
+        "type": "image"
+    },
+    {
+        "media": "flowey.webp",
+        "title": "Yellow",
+        "description": "Photograph taken in the Netherlands.",
+        "format": "landscape",
+        "order": 2,
+        "type": "image"
+    },
+    {
+        "media": "keyboard.webp",
+        "title": "Keyboard",
+        "description": "That's basically my keyboard, xd.",
+        "format": "landscape",
+        "order": 3,
+        "type": "image"
+    },
+    {
+        "media": "mossy.webp",
+        "title": "Moss",
+        "description": "Photograph taken at my University, in the Netherlands",
+        "format": "landscape",
+        "order": 4,
+        "type": "image"
+    },
+    {
+        "media": "pipes.webp",
+        "title": "Pipes",
+        "description": "Photograph taken in the Netherlands.",
+        "format": "landscape",
+        "order": 5,
+        "type": "image"
+    },
+    {
+        "media": "tower.webp",
+        "title": "Highrise",
+        "description": "Photograph taken in the Netherlands.",
+        "format": "portrait",
+        "order": 6,
+        "type": "image"
+    }
+]

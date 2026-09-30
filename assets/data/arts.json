@@ -1,0 +1,226 @@
+[
+    {
+        "media": "lockscreen.webp",
+        "title": "Momentum",
+        "description": "Art created only with Figma, a small challenge I gave to myself, as part of my own study on how to use Figma.",
+        "format": "landscape",
+        "order": 1,
+        "type": "image"
+    },
+    {
+        "media": "lumber.webp",
+        "title": "Lumber",
+        "description": "3D Art created with Roblox Studio and Blender.",
+        "format": "square",
+        "order": 1.1,
+        "type": "image"
+    },
+    {
+        "media": "oxy.webp",
+        "title": "Oxygen",
+        "description": "3D Art created with Blender. This was used for a short animated video <q>OxyCarb</q>.",
+        "format": "landscape",
+        "order": 1.2,
+        "type": "image"
+    },
+    {
+        "media": "qa.webp",
+        "title": "Introduction",
+        "description": "3D Art created with Blender. This is a snapshot of a short animated loop for a background video in my Semester 1 Portfolio website.",
+        "format": "landscape",
+        "order": 1.3,
+        "type": "image"
+    },
+    {
+        "media": "temple.webp",
+        "title": "Temple",
+        "description": "3D art created with Blender.",
+        "format": "landscape",
+        "order": 2,
+        "type": "image"
+    },
+    {
+        "media": "dystop.webp",
+        "title": "Dystopian",
+        "description": "3D art created with Blender, part of my university assignment on creating a 3D environment.",
+        "format": "landscape",
+        "order": 3,
+        "type": "image"
+    },
+    {
+        "media": "connectedworld.webp",
+        "title": "Connected",
+        "description": "3D art created with Blender. This was also used as a music cover art <q>Connected World</q>.",
+        "format": "landscape",
+        "order": 4,
+        "type": "image"
+    },
+    {
+        "media": "fractalart.webp",
+        "title": "Fractal",
+        "description": "3D art created with Blender. This was also used as a music cover art <q>Corrupted Color</q>.",
+        "format": "landscape",
+        "order": 5,
+        "type": "image"
+    },
+    {
+        "media": "2024.webp",
+        "title": "Signal",
+        "description": "3D art created with Blender, heavily inspired by dullscythe music video from Porter Robinson. This was also used as a music cover art <q>2024</q>.",
+        "format": "landscape",
+        "order": 6,
+        "type": "image"
+    },
+    {
+        "media": "fall.webp",
+        "title": "Falling Falling Falling",
+        "description": "Art created with FireAlpaca, Figma and Image Pixel Sorter website.",
+        "format": "portrait",
+        "order": 7,
+        "type": "image"
+    },
+    {
+        "media": "orbwallpaper.webp",
+        "title": "Landmark",
+        "description": "3D art created with Blender.",
+        "format": "landscape",
+        "order": 8,
+        "type": "image"
+    },
+    {
+        "media": "jellyfishwallpaper.webp",
+        "title": "The Deep",
+        "description": "3D art created with Blender.",
+        "format": "landscape",
+        "order": 9,
+        "type": "image"
+    },
+    {
+        "media": "handart.webp",
+        "title": "Downfall",
+        "description": "3D art created with Blender. This was also used as a music cover art <q>City Of Mistake</q>.",
+        "format": "landscape",
+        "order": 10,
+        "type": "image"
+    },
+    {
+        "media": "frame.webp",
+        "title": "Frames",
+        "description": "3D art created with Blender. This was also used as a music cover art <q>Frames</q>.",
+        "format": "landscape",
+        "order": 11,
+        "type": "image"
+    },
+    {
+        "media": "secretsanta.webp",
+        "title": "Aduu's picnic",
+        "description": "Art created with FireAlpaca, this was part of the 2025 Secret Santa event in an art Discord server.",
+        "format": "square",
+        "order": 12,
+        "type": "image"
+    },
+    {
+        "media": "100daysformicon.webp",
+        "title": "100 days in [form]",
+        "description": "3D art created with Blender, it's a music cover art for a 50vs50 community event.",
+        "format": "square",
+        "order": 13,
+        "type": "image"
+    },
+    {
+        "media": "samplicityicon2.webp",
+        "title": "SGC",
+        "description": "A compilation cover art for Samplicity special community event, where they collaborated with GenreComp event as well. This was created with Blender and Figma.",
+        "format": "square",
+        "order": 14,
+        "type": "image"
+    },
+    {
+        "media": "samplicityicon.webp",
+        "title": "samplicity",
+        "description": "A compilation cover art for Samplicity community event. This was created with Figma.",
+        "format": "square",
+        "order": 15,
+        "type": "image"
+    },
+    {
+        "media": "vacuum.webp",
+        "title": "Vacuum 3D model",
+        "description": "A low poly 3D model of a Vacuum gun. This work is used for an Edutainment VR game called <q>MiniMedicVR</q>, which was part of my internship at inMotionVR.",
+        "format": "square",
+        "order": 16,
+        "type": "image"
+    },
+    {
+        "media": "pistol.webp",
+        "title": "Pistol 3D model",
+        "description": "A low poly 3D model of a Pistol. This work is used for an Edutainment VR game called <q>MiniMedicVR</q>, which was part of my internship at inMotionVR.",
+        "format": "square",
+        "order": 17,
+        "type": "image"
+    },
+    {
+        "media": "sniper.webp",
+        "title": "Sniper 3D model",
+        "description": "A low poly 3D model of a Sniper. This work is used for an Edutainment VR game called <q>MiniMedicVR</q>, which was part of my internship at inMotionVR.",
+        "format": "landscape",
+        "order": 18,
+        "type": "image"
+    },
+    {
+        "media": "strayicon.webp",
+        "title": "Stray",
+        "description": "3D art created with Blender, FireAlpaca and Figma. This work is used for a music cover art <q>Stray</q>.",
+        "format": "square",
+        "order": 19,
+        "type": "image"
+    },
+    {
+        "media": "zackart.webp",
+        "title": "hopeful",
+        "description": "3D art created with Blender and Figma, inspired by <q>Your Name</q> and <q>Suzume</q> movie poster design.",
+        "format": "portrait",
+        "order": 20,
+        "type": "image"
+    },
+    {
+        "media": "unison.webp",
+        "title": "Unison",
+        "description": "3D art created with Blender, using basic modifiers, material shaders, compositing.",
+        "format": "landscape",
+        "order": 21,
+        "type": "image"
+    },
+    {
+        "media": "spsposter1.webp",
+        "title": "S.P.S Poster",
+        "description": "Poster design for the Exploration Department. This work is used as an advertisement material for the short film <q>Welcome to Solar Pulse Systems!</q>",
+        "format": "portrait",
+        "order": 22,
+        "type": "image"
+    },
+    {
+        "media": "environmentdesign.webp",
+        "title": "Explore",
+        "description": "Environment design for the Volume in Pixel Playground at Fontys. This work is used for the short film <q>Welcome to Solar Pulse Systems!</q>",
+        "format": "landscape",
+        "order": 23,
+        "type": "image"
+    },
+    {
+        "media": "robotwolfposter.webp",
+        "title": "Command Wolf",
+        "description": "A simple poster design after implementing a better rig system for the Command Wolf.",
+        "format": "portrait",
+        "order": 25,
+        "type": "image"
+    },
+        {
+        "media": "wolfieAnimation.webm",
+        "title": "Mission",
+        "description": "A one month project where I had the opportunity to refine my 3D modelling skills by creating a robot wolf from Zoids.",
+        "format": "landscape",
+        "order": 26,
+        "type": "video"
+    }
+]

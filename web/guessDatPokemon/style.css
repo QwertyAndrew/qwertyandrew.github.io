@@ -1,0 +1,960 @@
+/* GLOBAL STUFF */
+:root{
+    --text: rgb(216, 221, 250);
+    --background: rgb(9, 11, 28);
+    --primary: rgb(125, 135, 239);
+    --secondary: rgb(142, 71, 17);
+    --accent: rgb(194, 230, 51);
+    /* I got it from this: https://www.w3schools.com/css/css3_variables.asp */
+    /* Make life easier I guess? */
+}
+
+@font-face{
+    font-family: 'orbitron';
+        src: url(fonts/Orbitron-VariableFont_wght.woff) format('woff'),
+            url(fonts/Orbitron-VariableFont_wght.woff2) format('woff2');
+}
+
+@font-face{
+    font-family: 'roboto';
+        src: url(fonts/Roboto-Regular.woff) format('woff'),
+            url(fonts/Roboto-Regular.woff2) format('woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    user-select: none;
+}
+
+body{
+    background: var(--background);
+    overflow: hidden;
+}
+
+/* Specifically for the pixel and vignette cover */
+/* and also bg animation */
+.pixelCover{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 10000;
+    pointer-events: none;
+
+    background-image: url(image/pixel.png);
+    background-size: 4px;
+    background-position: center center;
+    opacity: 0.5;
+}
+
+.vignetteCover{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 10001;
+    pointer-events: none;
+
+    background-size: cover;
+    background-position: center center;
+
+    background: radial-gradient(circle, rgba(0,0,0,0) 50%, rgb(0,0,0) 100%);   
+}
+
+.dotgridcover{
+    width: 250vw;
+    height: 250vh;
+    position: absolute;
+    z-index: 9999;
+    pointer-events: none;
+    background: url(image/bgdotgrid.png);
+    background-position: -50vw -50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.25;
+    animation: dotgridBGAnim 120s linear infinite alternate, dotgridInitialAnim 2.5s cubic-bezier(0.45, 0, 0.55, 1) forwards;
+}
+
+@keyframes dotgridBGAnim {
+    0% {
+        background-position: -50vw -50vh; /* Start from the left */
+    }
+    100% {
+        background-position: -150vw -150vh; /* Move to the right */
+    }
+}
+
+@keyframes dotgridInitialAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.25;
+    }
+}
+
+
+/* Intro Screen UI */
+.introScreenUI{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.introScreenUI > *{
+    margin-left: 15vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.titleCard{
+    color: var(--text);
+    font-family: orbitron;
+    font-size: 10vh;
+    text-shadow: 0px 0px 5vmin var(--text);
+    opacity: 0;
+
+    animation: titleCardUp 0.5s cubic-bezier(0, 0.55, 0.45, 1) 0.1s forwards;
+}
+
+@keyframes titleCardUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0vh);
+    }
+}
+
+.menuButtons{
+    position: relative;
+}
+
+.menuButtons > button{
+    background: none;
+    border: none;
+    padding-right: 1vw;
+    color: var(--accent);
+    font-family: roboto;
+    font-size: 6.1vh;
+    text-shadow: 0px 0px 2vmin var(--accent);
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+
+    animation: menuButtonsDown 0.5s cubic-bezier(0, 0.55, 0.45, 1) 0.35s forwards;
+}
+
+.buttonCover{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    bottom: 0;
+    z-index: -1;
+    width: 0%;
+    height: 10%;
+    pointer-events: none;
+    box-shadow: 0px 0px 1vmin rgb(255, 255, 255);
+
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    /* https://easings.net/#easeOutExpo */
+}
+
+.menuButtons:hover .buttonCover{
+    width: 100%;
+}
+
+.menuButtons > button:active{
+    filter: invert(100%);
+}
+
+/* took me a bit to find that this is not impossible :D */
+/* https://stackoverflow.com/questions/6910049/on-a-css-hover-event-can-i-change-another-divs-styling */
+.menuButtons > button:active + .buttonCover{
+    height: 100%;
+}
+
+@keyframes menuButtonsDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-1vh);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Loading Screen UI */
+.loadingPokemonScreenUI{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transform: translateY(-5vh);
+
+    animation: loadingPokemonScreenUIDrop 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes loadingPokemonScreenUIDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-5vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0vh);
+    }
+}
+
+.loadedPokemonText{
+    position: absolute;
+    color: var(--text);
+    font-family: orbitron;
+    font-size: 6.1vh;
+    letter-spacing: 1vw;
+    text-shadow: 0px 0px 5vmin var(--text);
+
+    transition: all 0.5s cubic-bezier(0.5, 0, 0.75, 0);
+}
+
+.loadingBar{
+    width: 0vw;
+    height: 1vh;
+    background: linear-gradient(90deg, var(--primary) 0%, #FFFFFF 100%);
+    opacity: 1;
+    box-shadow: 0px 0px 2.5vmin #FFFFFF;
+
+    transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+/* Gameplay UI */
+.gameplayScreenUI{
+    display: none;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.titleGameplay{
+    color: var(--text);
+    font-family: orbitron;
+    font-size: 10vh;
+    text-shadow: 0px 0px 5vmin var(--text);
+    letter-spacing: 4.5vmin;
+    text-wrap: nowrap;
+    text-align: center;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    transform: translate(1vw,-10vh);
+    opacity: 0;
+
+    animation: titleGameplayDrop 0.5s cubic-bezier(0.5, 1, 0.89, 1) forwards;
+}
+
+@keyframes titleGameplayDrop {
+    0% {
+        opacity: 0;
+        transform: translate(1vw,-10vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(1vw,-2vh);
+    }
+}
+
+.gameplayInfo{
+    color: var(--text);
+    font-family: roboto;
+    font-size: 3.7vh;
+    text-shadow: 0px 0px 2vmin var(--text);
+    margin-left: 5vw;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+
+    transform: translateY(-5vh);
+    opacity: 0;
+
+    animation: gameplayInfoDrop 0.5s cubic-bezier(0.5, 1, 0.89, 1) forwards;
+}
+
+@keyframes gameplayInfoDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-5vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0vh);
+    }
+}
+
+.userInputForm{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 10vh;
+
+    transition: all 0.5s cubic-bezier(0.5, 1, 0.89, 1);
+
+    animation: userInputFormUp 2s cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes userInputFormUp {
+    0% {
+        opacity: 0;
+        transform: translateY(5vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.userInputForm > input{
+    background: black;
+    border: none;
+    font-size: 6.1vh;
+    width: 3vw;
+    text-align: center;
+    border-bottom: 0.5vh groove var(--primary);
+    border-radius: 1vmin;
+    text-transform: uppercase;
+    margin: 0 1vw;
+    color: var(--text);
+    font-family: roboto;
+    transform: translateY(0);
+    transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+
+    box-shadow: 0px 1vh 3vmin var(--primary), 0 0vh 2vmin var(--accent);
+    text-shadow: 0px 0px 2vmin var(--text);
+}
+
+.userInputForm > input:focus{
+
+    transform: translateY(-1vh);
+    background: var(--primary);
+}
+
+.textboxDivider{
+    width: 0.5vw;
+    background-color: var(--text);
+    box-shadow: 0px 0px 2vmin var(--text);
+    rotate: 10deg;
+    margin: 0 2vw;
+    border-radius: 100vh;
+}
+
+.pokemonSprite{
+    /* finally found a solution for centering image */
+    /* https://stackoverflow.com/questions/20878342/making-image-align-center-of-screen-in-html */
+    width: 50vw;
+    height: 55vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: contain;
+    margin: auto;
+    z-index: -2;
+    transition: all 0.5s cubic-bezier(0.5, 1, 0.89, 1);
+
+    animation: showPokemonSprite 1s cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes showPokemonSprite {
+    0%{
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.blurPokemonSprite{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    backdrop-filter: blur(5vmin);
+    z-index: -1;
+}
+
+.checkingIndication{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: linear-gradient(0deg, rgb(255, 0, 0) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    top: 0;
+    z-index: -11;
+}
+
+.submitIndication{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100vw;
+    text-align: center;
+    font-family: 'orbitron';
+    letter-spacing: 0.1vw;
+    opacity: 0.25;
+    margin-bottom: 3vh;
+    
+    font-size: 2.2vh;
+    color: var(--text);
+    text-shadow: 0px 0px 2vmin var(--text);
+
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    animation: submitIndicationDrop 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes submitIndicationDrop {
+    0%{
+        opacity: 0;
+        margin-bottom: -5vh;
+    }
+
+    100%{
+        opacity: 0.25;
+        margin-bottom: 3vh;
+    }
+}
+
+/* final score scene UI */
+.finalScoreScene{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 75vw;
+    height: 75vh;
+
+    display: none;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* game over text */
+.finalScoreScene > h1{
+    width: fit-content;
+    height: fit-content;
+    color: var(--text);
+    font-family: orbitron;
+    font-size: 10vh;
+    text-shadow: 0px 0px 5vmin var(--text);
+    letter-spacing: 1vw;
+
+    transform: translateX(-10vw);
+    opacity: 0;
+
+    animation: gameOverAnim 1s cubic-bezier(0, 0.55, 0.45, 1) forwards;
+}
+
+@keyframes gameOverAnim {
+    0%{
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.displayChosenPokemon{
+    color: var(--text);
+    font-family: orbitron;
+    text-transform: capitalize;
+    font-size: 3.8vh;
+    text-shadow: 0px 0px 5vmin var(--text);
+
+    transform: translateX(-10vw);
+    opacity: 0;
+
+    animation: displayChosenPokemonAnim 1s cubic-bezier(0, 0.55, 0.45, 1) 0.25s forwards;
+}
+
+@keyframes displayChosenPokemonAnim {
+    0%{
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.finalStatistic{
+    color: var(--text);
+    font-family: roboto;
+    font-size: 3.8vh;
+    text-shadow: 0px 0px 5vmin var(--text);
+
+    transform: translateX(-10vw);
+    opacity: 0;
+
+    animation: statisticAnim 1s cubic-bezier(0, 0.55, 0.45, 1) 2s forwards;
+}
+
+@keyframes statisticAnim {
+    0%{
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.finalVerdict{
+    color: var(--text);
+    font-family: roboto;
+    font-size: 4vh;
+    text-shadow: 0px 0px 5vmin var(--text);
+
+    transform: translateX(-10vw);
+    opacity: 0;
+
+    animation: verdictAnim 1s cubic-bezier(0, 0.55, 0.45, 1) 4s forwards;
+}
+
+@keyframes verdictAnim {
+    0%{
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.finalGuessingGrading {
+    color: var(--accent);
+    font-family: orbitron;
+    font-size: 16vh;
+    text-shadow: 0px 0px 1vmin var(--accent), 0px 0px 5vmin var(--accent);
+    font-weight: bolder;
+    transform: translateX(-5vw);
+
+    opacity: 0;
+    animation: finalGuessingGradeDrop 1s cubic-bezier(0.34, 1.56, 0.64, 1) 6s forwards;
+}
+
+@keyframes finalGuessingGradeDrop {
+    0%{
+        opacity: 0;
+        transform: translateX(-5vw);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.finalScoreButtons{
+    position: relative;
+    opacity: 0;
+    transform: translateX(-20vw);
+
+    animation: finalScoreButtonAnim 1s cubic-bezier(0, 0.55, 0.45, 1) 6.5s forwards;
+}
+
+@keyframes finalScoreButtonAnim {
+    0%{
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.finalScoreButtons > button {
+    background: none;
+    border: none;
+    padding-right: 1vw;
+    color: var(--accent);
+    font-family: roboto;
+    font-size: 6.1vh;
+    text-shadow: 0px 0px 2vmin var(--accent);
+    cursor: pointer;
+
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.finalScoreButtonCover{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    bottom: 0;
+    z-index: -1;
+    width: 0%;
+    height: 10%;
+    backdrop-filter: invert(100%);
+    pointer-events: none;
+    box-shadow: 0px 0px 1vmin rgb(255, 255, 255);
+
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.finalScoreButtons:hover .finalScoreButtonCover{
+    width: 100%;
+}
+
+.finalScoreButtons > button:active{
+    filter: invert(100%);
+}
+
+.finalScoreButtons > button:active + .finalScoreButtonCover{
+    height: 100%;
+}
+
+/* When you actually guessed all 1025 pokemons */
+.winScreenUI{
+    display: none;
+    position: absolute;
+    width: 75vw;
+    height: 75vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.winScreenUI > h1{
+    width: fit-content;
+    height: fit-content;
+    color: var(--text);
+    font-family: orbitron;
+    font-size: 10vh;
+    text-shadow: 0px 0px 5vmin var(--text);
+    letter-spacing: 1vw;   
+    opacity: 0;
+    transform: translateX(-10vw);
+
+    animation: winScreenTitleDrop 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes winScreenTitleDrop {
+    0% {
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.guessedAllPokemon{
+    color: var(--text);
+    font-family: orbitron;
+    text-transform: capitalize;
+    font-size: 3.8vh;
+    text-shadow: 0px 0px 5vmin var(--text);
+
+    opacity: 0;
+    transform: translateX(-10vw);
+
+    animation: guessedAllPokemonDrop 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.25s forwards;
+}
+
+@keyframes guessedAllPokemonDrop {
+    0% {
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.finalWinStatistic{
+    color: var(--text);
+    font-family: roboto;
+    font-size: 3.8vh;
+    text-shadow: 0px 0px 5vmin var(--text);
+
+    opacity: 0;
+    transform: translateX(-10vw);
+
+    animation: finalWinStatisticDrop 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s forwards;
+}
+
+@keyframes finalWinStatisticDrop {
+    0% {
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.finalScoreVerdict{
+    color: var(--text);
+    font-family: roboto;
+    font-size: 4vh;
+    text-shadow: 0px 0px 5vmin var(--text);
+
+    opacity: 0;
+    transform: translateX(-10vw);
+
+    animation: finalScoreVerdictDrop 1s cubic-bezier(0.34, 1.56, 0.64, 1) 2s forwards;
+}
+
+@keyframes finalScoreVerdictDrop {
+    0% {
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.finalWinGrade{
+    color: var(--accent);
+    font-family: orbitron;
+    font-size: 16vh;
+    text-shadow: 0px 0px 1vmin var(--accent), 0px 0px 5vmin var(--accent);
+    font-weight: bolder;
+    transform: translateX(-5vw);
+
+    opacity: 0;
+    animation: finalWinGradeDrop 1s cubic-bezier(0.34, 1.56, 0.64, 1) 5s forwards;
+}
+
+@keyframes finalWinGradeDrop {
+    0% {
+        opacity: 0;
+        transform: translateX(-5vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.winScreenButtons{
+    position: relative;
+    opacity: 0;
+    transform: translateX(-5vw);
+
+    animation: winScreenButtonsDrop 1s cubic-bezier(0.34, 1.56, 0.64, 1) 5.75s forwards;
+}
+
+@keyframes winScreenButtonsDrop {
+    0% {
+        opacity: 0;
+        transform: translateX(-5vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.winScreenButtons > button{
+    background: none;
+    border: none;
+    padding-right: 1vw;
+    color: var(--accent);
+    font-family: roboto;
+    font-size: 6.1vh;
+    text-shadow: 0px 0px 2vmin var(--accent);
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+
+    animation: winScreenButtonDown 0.5s cubic-bezier(0, 0.55, 0.45, 1) 0.35s forwards;
+}
+
+.winScreenButtons:hover .buttonCover{
+    width: 100%;
+}
+
+.winScreenButtons > button:active{
+    filter: invert(100%);
+}
+
+.winScreenButtons > button:active + .buttonCover{
+    height: 100%;
+}
+
+.creditScreenUI{
+    display: none;
+    position: absolute;
+    width: 75vw;
+    height: 75vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.creditScreenUI > h1{
+    color: var(--text);
+    font-family: orbitron;
+    font-size: 10vh;
+    text-shadow: 0px 0px 5vmin var(--text);
+    opacity: 0;
+    transform: translateX(-10vw);
+
+    animation: creditTitleDrop 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes creditTitleDrop {
+    0%{
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.creditScreenUI > p{
+    color: var(--text);
+    font-family: roboto;
+    font-size: 3.7vh;
+    text-shadow: 0px 0px 2.5vmin var(--text);
+    opacity: 0;
+    transform: translateX(-10vw);
+    font-weight: 100;
+
+    animation: creditInfoDrop 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s forwards;
+}
+
+@keyframes creditInfoDrop {
+    0%{
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.creditScreenUI > p > a{
+    color: var(--text);
+    font-family: roboto;
+    font-size: 3.7vh;
+    text-shadow: 0px 0px 2.5vmin var(--text);
+    font-weight: 100;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.creditScreenUI > p > a:hover{
+    letter-spacing: 0.1vw;
+}
+
+.creditScreenButtons{
+    position: relative;
+    opacity: 0;
+    transform: translateX(-5vw);
+
+    animation: creditScreenButtonsDrop 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards;
+}
+
+@keyframes creditScreenButtonsDrop {
+    0% {
+        opacity: 0;
+        transform: translateX(-5vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.creditScreenButtons > button{
+    background: none;
+    border: none;
+    padding-right: 1vw;
+    color: var(--accent);
+    font-family: roboto;
+    font-size: 6.1vh;
+    text-shadow: 0px 0px 2vmin var(--accent);
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+
+    animation: winScreenButtonDown 0.5s cubic-bezier(0, 0.55, 0.45, 1) 0.35s forwards;
+}
+
+.creditScreenButtons:hover .buttonCover{
+    width: 100%;
+}
+
+.creditScreenButtons > button:active{
+    filter: invert(100%);
+}
+
+.creditScreenButtons > button:active + .buttonCover{
+    height: 100%;
+}
+
