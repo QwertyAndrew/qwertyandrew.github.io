@@ -8,14 +8,6 @@
         "type": "image"
     },
     {
-        "media": "lumber.webp",
-        "title": "Lumber",
-        "description": "3D Art created with Roblox Studio and Blender.",
-        "format": "square",
-        "order": 1.1,
-        "type": "image"
-    },
-    {
         "media": "oxy.webp",
         "title": "Oxygen",
         "description": "3D Art created with Blender. This was used for a short animated video <q>OxyCarb</q>.",
