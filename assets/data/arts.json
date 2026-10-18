@@ -202,7 +202,7 @@
     {
         "media": "robotwolfposter.webp",
         "title": "Command Wolf",
-        "description": "A simple poster design after implementing a better rig system for the Command Wolf.",
+        "description": "A simple poster design made with Figma, after implementing a better rig system for the Command Wolf.",
         "format": "portrait",
         "order": 25,
         "type": "image"
@@ -210,7 +210,7 @@
         {
         "media": "wolfieAnimation.webm",
         "title": "Mission",
-        "description": "A one month project where I had the opportunity to refine my 3D modelling skills by creating a robot wolf from Zoids.",
+        "description": "A one month project where I had the opportunity to refine my 3D modelling skills, by creating a robot wolf from Zoids.",
         "format": "landscape",
         "order": 26,
         "type": "video"
