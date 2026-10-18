@@ -52,8 +52,12 @@
         <!-- Mandatory, do not change the below -->
         <h1 class="title"></h1>
         <div class="articleMeta">
-            <time></time>
             <ul class="tagContainer"></ul>
+            <div class="blogInfo">
+                <time></time>
+                <div class="dotDivider"></div>
+                <span class="readingTime"></span>
+            </div>
         </div>
         <!-- Mandatory, do not change the above -->
 
@@ -64,7 +68,7 @@
             <img src="../assets/images/blog/newweb/firstPortfolio.webp"
                 alt="A screenshot of my first portfolio website, created in 2023 during my third semester.">
             <figcaption>
-                [ My first portfolio website during my second year. ]
+                [ My first portfolio website during my second year ]
             </figcaption>
         </figure>
 
@@ -82,7 +86,7 @@
             <img src="../assets/images/blog/newweb/brokenMobile.webp"
                 alt="A screenshot of a visual menu bug in my old portfolio.">
             <figcaption>
-                [ Disgusting visual bug that I hate ]
+                [ Screenshot of my disgusting visual bug that I hate ]
             </figcaption>
         </figure>
 
@@ -100,7 +104,7 @@
             <img src="../assets/images/blog/newweb/artPage.webp"
                 alt="A screenshot of my art page from my old portfolio">
             <figcaption>
-                [ My old art page ]
+                [ Screenshot of my old art page ]
             </figcaption>
         </figure>
 
@@ -121,7 +125,7 @@
             <img src="../assets/images/blog/newweb/inspiration.webp"
                 alt="A screenshot of both Evan Nave and David Oneacre Portfolios">
             <figcaption>
-                [ Evan's and David's portfolio ]
+                [ Screenshot of Evan's and David's portfolio ]
             </figcaption>
         </figure>
 
@@ -135,14 +139,12 @@
             <b>How</b> did you make your final product and <b>why</b>?
             <br>
             What's your <b>contact information?</b><br><br>
-            Even when in an Article, or a Blog, that should have the context of the product, the challenges I have
-            faced, the outcome after facing the challenge, and the result... to show if my product actually solve a
+            I can put information on how did I make my final product in an Article, or a Blog. It is also a way to show if my product actually solve a
             design challenge!
             <br><br>
-            But what's my final product?
+            So, what's my final product?
             <br>
-            Well I can use Blender, I can make Arts using Blender, I do tried to learn how to draw things, and I make
-            Games, and Music, and a bit of photography, and a bit of Web Development, hmm...
+            Well I can use Blender, I can make Arts using Blender, I do tried to learn how to draw things, and I make Games, and Music, and a bit of photography, and a bit of Web Development...
             <br><br>
             I can showcase my Arts, Photos, Games, Websites, and Music!
             <br><br>
@@ -178,9 +180,8 @@
         </figure>
 
         <p>
-            I tried to go for something like Pinterest, where I don't want any nonsense when the user opens my
-            portfolio, I want to showcase my cool stuff first, and then if they're impressed, they can look deeper on
-            who I am.
+            I tried to go for something like Pinterest, where I don't want any nonsense. When people open my
+            portfolio, I want to showcase my cool stuff first, and then if they're impressed, they can check the about me section.
             <br><br>
             Additionally, the Disc rotating on the right side seems to be the most impressive instead of a grid layout
             like Pinterest, I guess it is also a way to show the cover art of that music I made too!
@@ -224,15 +225,15 @@
             <br><br>
             For the sake of simplicity, I will go for the <b>Vanilla</b> route. Yes, I know it might sounds like the
             torturious way to create a website, and yes I know it is good to use Static Site Generator, like <a
-                href="https://www.11ty.dev/">Eleventy</a>! But for the time being, HTML CSS and JavaScript is already
+                href="https://www.11ty.dev/">Eleventy</a>! But for the time being, Vanillia route means HTML CSS and JavaScript only, and they are already
             enough for me to make my portfolio website.
             <br><br>
             I will keep Eleventy in mind tho! I heard SSG can make portfolio a bit easier to manage :3
             <br><br>
             Visual Studio Code is my main environment to code the portfolio website, just like before. And for the logic
-            side of things, I will ask a LLM for some help.
+            side of things, I can ask a LLM for some help, especially the JavaScript side of things. I also need to do some comments too so future me know what's up.
             <br><br>
-            For organisation sake, I divided the files into folder like this:
+            Anyways, for organisation sake, I divided the files into folder like this:
         </p>
 
         <figure>
@@ -243,15 +244,15 @@
         </figure>
 
         <p>
-            Assets folder contains pretty much all assets in the website, like images, sounds, videos, and even JSON
+            <b>Assets folder</b> contains pretty much all assets in the website, like images, sounds, videos, and even JSON
             data (We will get back to this later).
             <br><br>
-            Blog folder contains all blog page, including this one, because each blog page is a different HTML, hence a
+            <b>Blog folder</b> contains all blog page, including this one, because each blog page is a different HTML, hence a
             folder would be awesome.
             <br><br>
-            Script folder contains all JavaScript files, that should be self-explanatory.
+            <b>Script folder</b> contains all JavaScript files, that should be self-explanatory.
             <br><br>
-            Web folder contains all other website that I created during my semester. Because I want to showcase my
+            <b>Web folder</b> contains all other website that I created during my semester. Because I want to showcase my
             front-end development skills, why not include some of my old projects in.
             <br><br>
             I started with the navigation bar, and this is the result:
@@ -268,9 +269,9 @@
         <p>
             It also works when you use the previous page functionality from your browser too, super neat.
             <br><br>
-            Next up is the Pinterest grid. The layout used by them apparently is called a <b>masonry layout</b> (also
+            Next up is the Pinterest grid. The layout used by them apparently is called a <b>Masonry layout</b> (also
             known as a waterfall layout). So, the idea is unlike a bento box grid, it has the same column width, but
-            various height! Because the height matters, I divided the image or video into 3 category:
+            various heights! Because the height matters, I divided the image or video into 3 categories:
             <br><br>
             - Portrait
             <br>
@@ -291,7 +292,7 @@
 
         <p>
             Using the art JSON data, I can let JavaScript implement the images inside the HTML, without me manually
-            adding the img tag, and applying with the masonry layout, this is the result:
+            adding the image tag. After applying the Masonry layout, this is the result:
         </p>
 
         <figure>
@@ -339,11 +340,13 @@
         </figure>
 
         <p>
-            Now for the fun part, <b>Music</b> section! Concept the same as before, using JSON to fill up the data so I
+            Now for the fun part, <b>Music</b> section! 
+            
+            <br><br>
+            Concept the same as before, using JSON to fill up the data so I
             don't have to.
-            <br>
-            I want to have a DVD disc spinning on the right side, and the left side is a selection of music I made. I
-            tried to simulate how DVD disc looks, it's pretty hard but I think I got it right.
+            I want to have a DVD disc spinning on the right side, and the left side is a selection of music I've made. I
+            tried to simulate the texture of a DVD, it's pretty hard but I think I got it right (it's really subtle tho lol).
         </p>
 
         <figure>
@@ -356,7 +359,7 @@
 
         <p>
             Initially I added those kind of lines that exist on a vinyl, but according to my friend's feedback, that is
-            not how CD works so I <b>must</b> make it smooth.
+            not how DVD works, so I <b>must</b> make it smooth.
         </p>
 
         <figure>
@@ -376,7 +379,7 @@
 
         <h2 class="subheading">Result</h2>
         <p>
-            You are looking at the final result right now! Well, since I'm writing this blog I missed quite a couple of stuff, but the MVP (Minimal Viable Product) is there so yippee!
+            You are looking at the final result! Well, since I'm writing this blog I missed quite a couple of stuff, but the MVP (Minimal Viable Product) is there, yippee!
         </p>
 
         <figure>
@@ -387,9 +390,9 @@
         </figure>
 
         <p>
-            Currently as I'm writing, the website hosted using GitPage system from Github, because it is free. But, I'm thinking about getting a web domain soon... having a web domain is nice and also the subscription isn't so bad for a year.
+            Currently as I'm writing, the website is hosted on GitHub, called GitPage, because it is free. But, I'm thinking about getting a web domain soon... having a web domain is nice and also the subscription isn't so bad for a year.
             <br><br>
-            Additionally, having the code on Github helps with <b>version control</b>, and also for me to create <b>issues</b> for future me to handle.
+            Additionally, having the code on Github helps with <b>version control</b>, and also for me to create <b>issues</b> for future QA to handle.
         </p>
 
         <figure>
@@ -405,7 +408,7 @@
             <br><br>
             I <b>really, really, <i>reeeaaallyyyy</i></b> love the music page so much. It is something I somehow did with a touch of hyperfixation, and I love it.
             <br><br>
-            On the downside... There are a lot of things that I can improve in terms of the UX side of things, such as micro-animation (which was use a lot in my previous portfolio), and micro-decoration. Additionally, design principle would be cool to make the website visually yummy.
+            On the downside... There are a lot of things that I can improve in terms of the UI/UX side of things, such as micro-animation (which was use a lot in my previous portfolio), bit of decoration, and make sure all the buttons don't have "ghost interation". Additionally, design principle would be cool to make the website visually yummy.
         </p>
 
         <figure>
@@ -415,11 +418,11 @@
             </figcaption>
         </figure>
         <p>
-            Those are the small fixes/patches that I will do in the future, but for now as it is the MVP, I am very happy on this. It is a hard challenge (I have to admit, I don't think I am good at front-end development, like I'm going Vanilla and that's bad xd), but I overcomed and learnt a lot along the way.
+            Those are the small fixes/patches that I will do in the future, but for now, as it's the MVP, I am very happy on this. It is a hard challenge (I have to admit, I don't think I'm good at front-end development, like I'm going Vanilla and that's like, not awesome sauce xd), but I overcomed and learnt a lot along the way.
             <br><br>
-            For the readers, I hope this is inspiring for you to make your own website, but an advice I can give to you would be plan and playtest.
+            For the readers, I hope this is inspiring for you to make your own website, but an advice I can give to you would be to plan and playtest.
             <br><br>
-            One unfortunate mistake that I did was going to the development phase, without testing my Hi-fi prototype. Making a prototype can be fast and, well, keyword is <b>prototype</b> so you expect to have a lot of iteration. But due to time constraints, I had to. It would be better for me to show the prototype to my professors and get feedback from there, hell, even ask companies to review my prototype too. So... ask! Even when the prototype is hot garbage, feedback is better than nothing.
+            One unfortunate mistake that I did was immediately going to the development phase, without testing my Hi-fi prototype. Making a prototype can be fast and, well, keyword is <b>prototype</b> so you expect to have a lot of iteration. But due to time constraints, I had to skip the playtest sesh. It would be better for me to show the prototype to my professors and get feedback from there, hell, even ask companies to review my prototype too. So... ask! Even when the prototype is hot garbage, feedback is better than nothing.
             <br><br>
             So ya, that's about it, fun project! Now go make your own website, it's very fun, trust me :3
         </p>
@@ -427,7 +430,7 @@
         
         <footer>
             <h1>Written with love, Q.A &#129446</h1>
-            <p>Back to <a href="../blog.html">Blog</a>?</p>
+            <p>Thanks for reading! You can go back to <a href="../blog.html">Blog</a>, if you want.</p>
         </footer>
     </main>
 

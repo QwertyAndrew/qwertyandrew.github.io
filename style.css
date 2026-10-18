@@ -1325,12 +1325,27 @@ main:has(#music.active) {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2vmin;
-
+    gap: 1.5vmin;
+    flex-direction: column;
     margin-top: 2vmin;
 }
 
-.articleMeta time {
+.articleMeta .blogInfo{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5vmin;
+}
+
+.dotDivider{
+    width: 0.75vmin;
+    height: 0.75vmin;
+    background-color: var(--secondary);
+    border-radius: 100%;
+}
+
+.articleMeta time,
+.articleBlog .readingTime {
     font-family: "lexend";
     font-size: clamp(12px, 1vw, 19px);
     color: var(--secondary);

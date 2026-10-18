@@ -112,5 +112,38 @@ function generateBlogNavigation() {
 }
 
 
+function calculateReadingTime() {
+    const article = document.querySelector(".articleBlog");
+    const readingTime = document.querySelector(".readingTime");
+
+    if (!article || !readingTime) return;
+
+    // Clone the article so we can exclude non-article content.
+    const content = article.cloneNode(true);
+
+    content.querySelectorAll(
+        ".title, .articleMeta, footer, script, style"
+    ).forEach(element => element.remove());
+
+    // Count the words in the remaining article.
+    const text = content.textContent.trim();
+    const wordCount = text
+        ? text.split(/\s+/).length
+        : 0;
+
+    // 200wpm
+    const wordsPerMinute = 200;
+    const minutes = Math.max(
+        1,
+        Math.ceil(wordCount / wordsPerMinute)
+    );
+
+    readingTime.textContent = `${minutes} min read`;
+}
+
+
+
+
+calculateReadingTime();
 loadBlogArticle();
 generateBlogNavigation();

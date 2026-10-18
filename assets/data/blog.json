@@ -1,11 +1,11 @@
 [
     {
         "title": "A new portfolio website",
-        "date": "2026-08-31",
+        "date": "2026-10-15",
         "image": "assets/images/blog/newweb/THUMBNAIL.webp",
         "url": "blog/newweb.html",
         "tags": [
-            "Website"
+            "Web Development"
         ]
     }
 ]
