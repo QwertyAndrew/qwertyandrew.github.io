@@ -135,9 +135,9 @@ nav ul {
     font-size: var(--font-lg);
     line-height: var(--line-height-heading);
     font-weight: bold;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.025em;
     transform-origin: left center;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     align-items: center;
     flex-direction: row;
 }
@@ -181,7 +181,6 @@ nav ul {
 .nav-submenu li {
     display: flex;
     position: relative;
-    padding: 0.5vmin 0;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
@@ -195,12 +194,11 @@ nav ul {
     font-family: "Lexend";
     font-size: var(--font-base);
     font-weight: 100;
-    letter-spacing: 0.01em;
     line-height: var(--line-height-body);
 
     padding-left: 3vmin;
 
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .nav-sublink-indicator {
