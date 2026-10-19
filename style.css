@@ -527,7 +527,8 @@ main:has(#music.active) {
     line-height: 0.75;
 }
 
-.text-group p {
+.text-group p,
+.text-group a {
     font-family: "lexend";
     color: var(--background);
     font-weight: 100;

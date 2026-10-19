@@ -16,14 +16,6 @@
         "type": "image"
     },
     {
-        "media": "qa.webp",
-        "title": "Introduction",
-        "description": "3D Art created with Blender. This is a snapshot of a short animated loop for a background video in my Semester 1 Portfolio website.",
-        "format": "landscape",
-        "order": 1.3,
-        "type": "image"
-    },
-    {
         "media": "temple.webp",
         "title": "Temple",
         "description": "3D art created with Blender.",
@@ -104,14 +96,6 @@
         "type": "image"
     },
     {
-        "media": "secretsanta.webp",
-        "title": "Aduu's picnic",
-        "description": "Art created with FireAlpaca, this was part of the 2025 Secret Santa event in an art Discord server.",
-        "format": "square",
-        "order": 12,
-        "type": "image"
-    },
-    {
         "media": "100daysformicon.webp",
         "title": "100 days in [form]",
         "description": "3D art created with Blender, it's a music cover art for a 50vs50 community event.",
@@ -121,7 +105,7 @@
     },
     {
         "media": "samplicityicon2.webp",
-        "title": "SGC",
+        "title": "S.G.C",
         "description": "A compilation cover art for Samplicity special community event, where they collaborated with GenreComp event as well. This was created with Blender and Figma.",
         "format": "square",
         "order": 14,
