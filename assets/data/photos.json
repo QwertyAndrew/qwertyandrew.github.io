@@ -26,7 +26,7 @@
     {
         "media": "mossy.webp",
         "title": "Moss",
-        "description": "Photograph taken at my University, in the Netherlands",
+        "description": "Photograph taken in Eindhoven, Netherland.",
         "format": "landscape",
         "order": 4,
         "type": "image"
@@ -34,7 +34,7 @@
     {
         "media": "pipes.webp",
         "title": "Pipes",
-        "description": "Photograph taken in the Netherlands.",
+        "description": "Photograph taken in Eindhoven, Netherlands.",
         "format": "landscape",
         "order": 5,
         "type": "image"
@@ -42,9 +42,145 @@
     {
         "media": "tower.webp",
         "title": "Highrise",
-        "description": "Photograph taken in the Netherlands.",
+        "description": "Photograph taken in Eindhoven, Netherlands.",
         "format": "portrait",
         "order": 6,
+        "type": "image"
+    },
+    {
+        "media": "wishes.webp",
+        "title": "Wishes",
+        "description": "Photograph taken in Lijiang, China.",
+        "format": "square",
+        "order": 7,
+        "type": "image"
+    },
+    {
+        "media": "steel.webp",
+        "title": "Steel",
+        "description": "Photograph taken in Frankfurt am Main, Germany.",
+        "format": "landscape",
+        "order": 8,
+        "type": "image"
+    },
+    {
+        "media": "sprout.webp",
+        "title": "Sprout",
+        "description": "Photograph taken in Vietnam.",
+        "format": "landscape",
+        "order": 9,
+        "type": "image"
+    },
+    {
+        "media": "sharp.webp",
+        "title": "Sharp",
+        "description": "Photograph taken in Eindhoven, Netherland.",
+        "format": "square",
+        "order": 10,
+        "type": "image"
+    },
+    {
+        "media": "seek.webp",
+        "title": "Seek",
+        "description": "Photograph taken in Vietnam.",
+        "format": "landscape",
+        "order": 11,
+        "type": "image"
+    },
+    {
+        "media": "roof.webp",
+        "title": "Roof",
+        "description": "Photograph taken in the Netherlands.",
+        "format": "square",
+        "order": 12,
+        "type": "image"
+    },
+    {
+        "media": "rock.webp",
+        "title": "Rock",
+        "description": "Photograph taken in Lijiang, China, I think.",
+        "format": "landscape",
+        "order": 13,
+        "type": "image"
+    },
+    {
+        "media": "resting.webp",
+        "title": "Resting",
+        "description": "Photograph taken in Vietnam, an attempt to take a photo like <a href='https://en.wikipedia.org/wiki/Nurture_(album)'>Poter Robinson's Nurture Album</a>, thanks sis for being the model!",
+        "format": "landscape",
+        "order": 14,
+        "type": "image"
+    },
+    {
+        "media": "oldtown.webp",
+        "title": "Old Town",
+        "description": "Photograph taken in Dali Old Town, China.",
+        "format": "landscape",
+        "order": 15,
+        "type": "image"
+    },
+    {
+        "media": "oldbridge.webp",
+        "title": "Old Bridge",
+        "description": "Photograph taken in Vietnam, shout out to my sister for being the model.",
+        "format": "portrait",
+        "order": 16,
+        "type": "image"
+    },
+    {
+        "media": "mothernature.webp",
+        "title": "Mother Nature",
+        "description": "Photograph taken in Vietnam.",
+        "format": "landscape",
+        "order": 17,
+        "type": "image"
+    },
+    {
+        "media": "music.webp",
+        "title": "Music",
+        "description": "Photograph taken in Dalat, Vietnam. I'm pretty sure the controller is older than me.",
+        "format": "landscape",
+        "order": 18,
+        "type": "image"
+    },
+    {
+        "media": "language.webp",
+        "title": "Language",
+        "description": "Photograph taken in China.",
+        "format": "portrait",
+        "order": 19,
+        "type": "image"
+    },
+    {
+        "media": "catto.webp",
+        "title": "Catto",
+        "description": "Photograph taken in China. Very cute stray cat.",
+        "format": "landscape",
+        "order": 20,
+        "type": "image"
+    },
+    {
+        "media": "caged.webp",
+        "title": "Caged",
+        "description": "Photograph taken in China. Hopefully they are alright tbh.",
+        "format": "landscape",
+        "order": 21,
+        "type": "image"
+    },
+    {
+        "media": "balance.webp",
+        "title": "Balance",
+        "description": "Photograph taken in Vietnam. I like the balance between land and sky.",
+        "format": "square",
+        "order": 22,
+        "type": "image"
+    },
+    {
+        "media": "alley.webp",
+        "title": "Alleyway",
+        "description": "Photograph taken in China. Was raining that day too, making the scene quite moody.",
+        "format": "portrait",
+        "order": 23,
         "type": "image"
     }
 ]
