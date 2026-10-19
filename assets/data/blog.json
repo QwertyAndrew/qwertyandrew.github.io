@@ -1,11 +1,22 @@
 [
     {
-        "title": "A new portfolio website",
+        "title": "My new portfolio website",
         "date": "2026-10-15",
         "image": "assets/images/blog/newweb/THUMBNAIL.webp",
         "url": "blog/newweb.html",
         "tags": [
             "Web Development"
+        ]
+    },
+    {
+        "title": "Creating a robot wolf in Blender",
+        "date": "2026-10-19",
+        "image": "assets/images/blog/commandwolf/THUMBNAIL.webp",
+        "url": "blog/commandwolf.html",
+        "tags": [
+            "Modelling",
+            "Rigging",
+            "Animating"
         ]
     }
 ]
