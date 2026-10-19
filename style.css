@@ -1,11 +1,29 @@
 /* global stuff */
 :root {
+    /* LAYOUT */
     --nav-width: 300px;
+
+    /* COLOURS */
     --text: rgb(15, 23, 42);
     --background: rgb(248, 250, 252);
     --primary: rgb(37, 99, 235);
     --secondary: rgb(148, 163, 184);
     --accent: rgb(56, 189, 248);
+
+    /* TYPOGRAPHY */
+    --font-base: clamp(1rem, 1.15vw + 0.5rem, 1.9375rem);
+
+    /* GOLDEN RATIO SCALE */
+    --font-xs: clamp(0.625rem, 0.5vw + 0.4rem, 0.75rem);
+    --font-sm: clamp(0.75rem, 0.65vw + 0.45rem, 1.1875rem);
+    --font-lg: clamp(1.25rem, 1.8vw + 0.5rem, 3.125rem);
+    --font-xl: clamp(1.5rem, 3.2vw + 0.5rem, 5.0625rem);
+    --font-2xl: clamp(2rem, 5.5vw + 0.5rem, 8.125rem);
+
+    /* LINE HEIGHT */
+    --line-height-tight: 1.1;
+    --line-height-heading: 1.2;
+    --line-height-body: 1.6;
 }
 
 html {
@@ -114,11 +132,12 @@ nav ul {
     text-decoration: none;
     width: 150%;
     font-family: "Lexend";
-    font-size: clamp(32px, 2.6vw, 50px);
+    font-size: var(--font-lg);
+    line-height: var(--line-height-heading);
     font-weight: bold;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.025em;
     transform-origin: left center;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     align-items: center;
     flex-direction: row;
 }
@@ -162,7 +181,6 @@ nav ul {
 .nav-submenu li {
     display: flex;
     position: relative;
-    padding: 0.5vmin 0;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
@@ -174,13 +192,13 @@ nav ul {
     text-decoration: none;
 
     font-family: "Lexend";
-    font-size: clamp(24px, 1.6vw, 31px);
+    font-size: var(--font-base);
     font-weight: 100;
-    letter-spacing: 0.01em;
+    line-height: var(--line-height-body);
 
     padding-left: 3vmin;
 
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .nav-sublink-indicator {
@@ -206,7 +224,7 @@ nav ul {
     pointer-events: none;
     z-index: -1;
 
-    transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 
     mask-image: linear-gradient(to right,
             rgb(255, 255, 255) 50%,
@@ -257,7 +275,7 @@ nav ul {
     position: absolute;
     top: 0;
     right: 0;
-    width: 5px;
+    width: 3px;
     height: 100%;
     background: linear-gradient(0deg,
             rgba(56, 189, 248, 0) 0%,
@@ -504,7 +522,7 @@ main:has(#music.active) {
     font-family: "forcedsquare";
     color: var(--background);
     font-weight: 100;
-    font-size: clamp(52px, 4.2vw, 81px);
+    font-size: var(--font-xl);
     text-transform: uppercase;
     line-height: 0.75;
 }
@@ -513,7 +531,7 @@ main:has(#music.active) {
     font-family: "lexend";
     color: var(--background);
     font-weight: 100;
-    font-size: clamp(13px, 1vw, 20px);
+    font-size: var(--font-sm);
     text-align: right;
 }
 
@@ -634,9 +652,9 @@ main:has(#music.active) {
     padding: 1.5vmin 2vmin 0vmin 2vmin;
 
     font-family: "forcedsquare";
-    font-size: clamp(32px, 2.6vw, 52px);
+    font-size: var(--font-lg);
     font-weight: 100;
-    line-height: 0.75;
+    line-height: var(--line-height-heading);
 
     color: var(--text);
 }
@@ -646,9 +664,9 @@ main:has(#music.active) {
     height: fit-content;
 
     font-family: "lexend";
-    font-size: clamp(12px, 1vw, 20px);
+    font-size: var(--font-sm);
     font-weight: 100;
-    line-height: 1.5;
+    line-height: var(--line-height-body);
 
     color: var(--text);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -662,8 +680,6 @@ main:has(#music.active) {
     width: 100%;
     gap: 2px;
     margin-top: auto;
-
-    border-top: 1px solid var(--secondary);
 }
 
 .link-container a {
@@ -675,7 +691,7 @@ main:has(#music.active) {
     background-color: var(--primary);
 
     font-family: "lexend";
-    font-size: clamp(12px, 1vw, 20px);
+    font-size: var(--font-sm);
     letter-spacing: 0.125vmin;
 
     text-align: center;
@@ -768,12 +784,12 @@ main:has(#music.active) {
 }
 
 .trackTitle {
-    font-size: clamp(20px, 1.6vw, 32px);
+    font-size: var(--font-base);
     letter-spacing: 0.1vmin;
 }
 
 .trackArtist {
-    font-size: clamp(12px, 1vw, 20px);
+    font-size: var(--font-sm);
 }
 
 .trackButton:hover {
@@ -1220,10 +1236,10 @@ main:has(#music.active) {
 
 .textContent h1 {
     font-family: "forcedsquare";
-    font-size: clamp(32px, 2.6vw, 52px);
+    font-size: var(--font-lg);
     font-weight: 100;
 
-    line-height: 1;
+    line-height: var(--line-height-heading);
 
     color: var(--text);
 
@@ -1232,7 +1248,7 @@ main:has(#music.active) {
 
 .textContent time {
     font-family: "lexend";
-    font-size: clamp(12px, 1vw, 20px);
+    font-size: var(--font-sm);
     font-weight: 100;
 
     color: var(--secondary);
@@ -1255,7 +1271,7 @@ main:has(#music.active) {
     border: 1px solid var(--secondary);
 
     font-family: "lexend";
-    font-size: clamp(8px, 0.6vw, 12px);
+    font-size: var(--font-xs);
     font-weight: 100;
     scale: 1;
 
@@ -1296,7 +1312,7 @@ main:has(#music.active) {
 
 .articleBlog>.title {
     font-family: "forcedsquare";
-    font-size: clamp(52px, 4.2vw, 81px);
+    font-size: var(--font-xl);
     font-weight: 100;
     width: 100%;
     text-align: center;
@@ -1305,7 +1321,7 @@ main:has(#music.active) {
 
 .articleBlog>footer>h1{
     font-family: "forcedsquare";
-    font-size: clamp(32px, 2.6vw, 50px);
+    font-size: var(--font-xl);
     font-weight: 100;
     width: 100%;
     text-align: center;
@@ -1314,7 +1330,7 @@ main:has(#music.active) {
 
 .articleBlog>footer>p{
     font-family: "lexend";
-    font-size: clamp(12px, 1vw, 19px);
+    font-size: var(--font-sm);
     font-weight: 100;
     width: 100%;
     text-align: center;
@@ -1347,7 +1363,7 @@ main:has(#music.active) {
 .articleMeta time,
 .articleBlog .readingTime {
     font-family: "lexend";
-    font-size: clamp(12px, 1vw, 19px);
+    font-size: var(--font-sm);
     color: var(--secondary);
 }
 
@@ -1365,7 +1381,7 @@ main:has(#music.active) {
     border: 1px solid var(--secondary);
 
     font-family: "lexend";
-    font-size: clamp(12px, 1vw, 19px);
+    font-size: var(--font-sm);
     font-weight: 100;
 
     color: var(--text);
@@ -1374,8 +1390,9 @@ main:has(#music.active) {
 .articleBlog>p {
     font-family: "lexend";
     font-weight: 100;
-    font-size: clamp(12px, 1vw, 19px);
+    font-size: var(--font-sm);
     margin: 2vmin 0vmin;
+    line-height: var(--line-height-body);
 }
 
 .articleBlog>p>b {
@@ -1385,8 +1402,9 @@ main:has(#music.active) {
 .articleBlog>.subheading {
     font-family: "lexend";
     font-weight: bold;
-    font-size: clamp(19px, 1.6vw, 31px);
-    margin-top: 5vmin;
+    font-size: var(--font-lg);
+    margin-top: 2.5vmin;
+    line-height: var(--line-height-heading);
 }
 
 .articleBlog>p,
@@ -1410,9 +1428,9 @@ main:has(#music.active) {
     padding: 1.5vmin 2vmin;
 
     font-family: "lexend";
-    font-size: clamp(12px, 0.9vw, 17px);
+    font-size: var(--font-xs);
     font-weight: 100;
-    line-height: 1.5;
+    line-height: var(--line-height-tight);
 
     color: var(--secondary);
 }
@@ -1473,7 +1491,7 @@ main:has(#music.active) {
 }
 
 .topTextGroup p {
-    font-size: clamp(24px, 1.6vw, 31px);
+    font-size: var(--font-base);
     font-family: "lexend";
     background-color: var(--background);
     padding: 0.5vmin 1vmin;
@@ -1491,7 +1509,7 @@ main:has(#music.active) {
 }
 
 .topTextGroup h1 {
-    font-size: clamp(81px, 6.8vw, 131px);
+    font-size: var(--font-2xl);
     font-family: "forcedsquare";
     background-color: var(--background);
     width: fit-content;
@@ -1508,38 +1526,36 @@ main:has(#music.active) {
     display: flex;
     font-family: "lexend";
     font-weight: 100;
-    font-size: clamp(13px, 1vw, 20px);
+    font-size: var(--font-sm);
     color: var(--text);
     flex-direction: row;
     align-items: flex-start;
     width: 70%;
-    height: fit-content;
     justify-content: center;
+    line-height: var(--line-height-body);
     gap: 5vmin;
 }
 
 .descriptionTextGroup .left {
     width: 60%;
-    height: fit-content;
     text-align: justify;
     text-justify: inter-word;
 }
 
 .descriptionTextGroup .left p b {
     font-family: "forcedsquare";
-    font-size: clamp(21px, 1.618vw, 32px);
+    font-size: var(--font-lg);
     color: var(--primary);
 }
 
 .descriptionTextGroup .left ul {
     padding-top: 1vmin;
     list-style: none;
-    padding-left: 5vmin;
+    padding-left: 4vmin;
 }
 
 .descriptionTextGroup .right {
     width: 40%;
-    height: 100%;
 }
 
 .descriptionTextGroup .right img {
@@ -1563,17 +1579,21 @@ main:has(#music.active) {
     flex-direction: column;
     align-items: flex-start;
     width: 70%;
-    margin: 5vmin 0vmin;
+    margin-top: 3vmin;
+    margin-bottom: 5vmin;
 }
 
 .contactTextGroup h1 {
-    font-size: clamp(31px, 2.6vw, 50px);
+    font-size: var(--font-lg);
+    line-height: var(--line-height-heading);
     width: 100%;
+    padding-top: 2vmin;
 }
 
 .contactTextGroup ul li {
     width: 100%;
-    font-size: clamp(13px, 1vw, 20px);
+    font-size: var(--font-sm);
+    line-height: var(--line-height-body);
     list-style: none;
     padding-left: 5vmin;
     padding-top: 1vmin;
