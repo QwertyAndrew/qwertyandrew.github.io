@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QA's Portfolio</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+    <!-- For mobile layout -->
+    <button class="menu-button" aria-label="Open navigation">
+        <img src="../assets/images/icons/menu.svg" alt="">
+    </button>
+    <!-- Navigation bar on the left -->
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html" class="nav-link">
+                    <div class="nav-link-indicator">
+                        <div class="nav-link-line"></div>
+                    </div>
+                    Works
+                </a>
+            </li>
+
+            <li>
+                <a href="../blog.html" class="nav-link active">
+                    <div class="nav-link-indicator"></div>
+                    Blog
+                </a>
+
+                <ul class="nav-submenu">
+                    <!-- LEAVE THIS EMPTY -->
+                </ul>
+            </li>
+
+            <li>
+                <a href="../about.html" class="nav-link">
+                    <div class="nav-link-indicator"></div>
+                    About
+                </a>
+            </li>
+        </ul>
+
+        <img class="navBGImage" alt="">
+        <div class="line"></div>
+    </nav>
+
+    <main class="articleBlog">
+        <!-- Mandatory, do not change the below -->
+        <h1 class="title"></h1>
+        <div class="articleMeta">
+            <ul class="tagContainer"></ul>
+            <div class="blogInfo">
+                <time></time>
+                <div class="dotDivider"></div>
+                <span class="readingTime"></span>
+            </div>
+        </div>
+        <!-- Mandatory, do not change the above -->
+
+        <h2 class="subheading">Introduction</h2>
+        <p>
+            Me and Chris (my assessor) discussed together on the game industry and what I want to become. I want to give
+            3D modelling a go, like actually being serious this time. But, I don't know where to start. Chris told me
+            that between 27th April to 3rd May is a holiday, and since I like mech stuff, why not try modeling a mech?
+            According to Chris, a strong portfolio requires PBR assets that have gone through the entire pipeline in
+            Game Development:</p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/3dpipeline.webp"
+                alt="A graphic showcasing how the 3D Pipeline should look like in Game Development">
+            <figcaption>
+                [ Figure created by me showing 8 steps of the 3D modelling pipeline, on Figma ]
+            </figcaption>
+        </figure>
+
+        <p>
+            That is the plan, I will try to model, texture and rig a robot during the holiday!
+            <br><br>
+            An additional challenge for me is to model a low-poly mesh, the reason why is low-poly is actually harder
+            than high-poly models. We can add extra details easily to an object, but having a limit on the polygon
+            count, that is hard! How I would add details, without adding extra polygons?
+            <br><br>
+            Another extra challenge is animation, but I don't want to go for that route just yet.
+        </p>
+
+        <h2 class="subheading">Preparation</h2>
+
+        <p>
+            To start of, I need to know what I want to model. Chris gave me some suggestions before the holiday, like
+            study from "Zone of the Enders":
+        </p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/zote.webp"
+                alt="Cover art of the game ZONE OF THE ENDERS: THE 2nd RUNNER">
+            <figcaption>
+                [ Cover art of the game <a
+                    href="https://www.pcgamingwiki.com/wiki/Zone_of_the_Enders:_The_2nd_Runner_MARS">ZONE OF THE ENDERS:
+                    THE 2nd RUNNER</a> ]
+            </figcaption>
+        </figure>
+
+        <p>
+            I also like Bakugan and it's mech style, and I also like Zoids models too. Unfortunately, I cannot stay in
+            this session for too long, so <b>a decision has to be made</b>.
+            <br><br>
+            So I picked Zoids as the main mech. I started gathering references from 3 mechs that I like:
+        </p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/zoidref.webp"
+                alt="Screenshot of my reference board of 3 mechs in Zoids VS Series">
+            <figcaption>
+                [ Screenshot of my reference board of 3 mechs in Zoids VS Series ]
+            </figcaption>
+        </figure>
+
+        <p>
+            I also gather other form of media, and put them in a <b>moodboard</b>, as it helps me to <b>inspired</b> and
+            <b>evoke a feeling</b> so that I know what to do now!
+        </p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/extraref.webp"
+                alt="Screenshot of my moodboard, referencing other medias: Bakugan, Digimon, Ninjago, MP3 players, and Playdate design">
+            <figcaption>
+                [ Screenshot of my moodboard, referencing other medias: Bakugan, Digimon, Ninjago, MP3 players, and
+                Playdate design ]
+            </figcaption>
+        </figure>
+
+        <h2 class="subheading">Blockout</h2>
+
+        <p>
+            I decided to go for <b>Command Wolf</b> as the main mech I want to model.
+        </p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/commandwolfRef.webp"
+                alt="Screenshot of Command Wolf Mech reference board">
+            <figcaption>
+                [ Screenshot of Command Wolf Mech reference board ]
+            </figcaption>
+        </figure>
+
+        <p>
+            To start with the right scale, I added a <a href="https://www.mixamo.com/">Mixamo character, Y Bot</a>, in
+            my Blender scene as a size reference Then I used <a href="https://models.spriters-resource.com/">The Models
+                Resources</a>, get the model and screenshot the Side, Top and Front. I also scale it so it makes sense
+            with the Mixamo character.
+            <br><br>
+            Now, The model itself does look overwhelming, but to simplified, most of the objects here are
+            <b>mirrored</b>. I can use a <b>Mirror Modifier</b> to help with the Blockout process. And this is the
+            result of the blockout:
+        </p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/blockout.webp"
+                alt="Multiple screenshots of the Blockout version 1.1 in Blender">
+            <figcaption>
+                [ Multiple screenshots of the Blockout version 1.1 in Blender ]
+            </figcaption>
+        </figure>
+
+        <p>
+            Before going straight to modelling, I want to ask for feedback on the current blockout so far, and these are
+            my responses:
+        </p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/feedback1.webp"
+                alt="Screenshot of a feedback from a 2D artist Archai">
+            <figcaption>
+                [ Screenshot of a feedback from a 2D artist "Archai" ]
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/feedback2.webp"
+                alt="Screenshot from Indigo's feedback, a game student in Breda University of Applied Sciences">
+            <figcaption>
+                [ Screenshot from Indigo's feedback, a game student in Breda University of Applied Sciences ]
+            </figcaption>
+        </figure>
+
+        <p>
+            I also asked other users that aren't in the art/game-related fields (music producers, gamers, students,
+            etc...), but it was hard for them to give me constructive feedback. But, on a positive note, they liked the
+            blockout so far, and they can't wait for the final model!
+            <br><br>
+            <i>
+                Additional note from the mech's head:
+                <br>
+                I found it confusing, I don't understand why the head is too small, and I also don't understand how it
+                works. I looked back at the original model, and I found out that there are roughly 2 main parts. But in
+                terms of movements, I found out the head can only move up and down, not left and right. So, my
+                assumption is that the torso can be flexible like this part highlighted below, where it acts like an
+                accordion:
+            </i>
+        </p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/torsoanalysis.webp"
+                alt="Screenshot of the original model with annotation, highlighting the torso">
+            <figcaption>
+                [ Screenshot of the original model with annotation, highlighting the torso ]
+            </figcaption>
+        </figure>
+
+        <p>
+            <i>
+                I do know that assumption isn't the greatest way to validate, so to know how this mech works, I looked
+                up the anime itself where Command Wolf is presents, aaaand as you can see:
+            </i>
+        </p>
+
+        <figure>
+            <video src="../assets/images/blog/commandwolf/anime.webm" autoplay loop muted>
+            </video>
+            <figcaption>
+                [ Video showing how Command Wolf moves in the anime <a
+                    href="https://archive.org/details/zoids-chaotic-century-s-01e-03/Zoids+Chaotic+Century+-+S01e05.mp4">"Zoids:
+                    Chaotic Century", season 1 episode 5</a> ]
+            </figcaption>
+        </figure>
+
+        <p>
+            <i>
+                I found out that the mech's head can only rotate up and down, the reason why it can look left and right
+                is based on it's posture, or leg rotations!
+                <br><br>
+                I will keep this in mind while modelling the mech.
+            </i>
+        </p>
+
+        <h2 class="subheading">Modelling</h2>
+
+        <p>
+            This is a solid mesh, not an organic-like mesh, so I can use <b>hard surface modelling</b> techniques. I
+            have tried this method before by modelling guns for a VR game during my internship, so this should be not so
+            complicated. I also need to think about the polygon counts too.
+            <br><br>
+            I applied the feedback I got to my model first, and then start modelling. I also use <b>Mirror Modifier</b>
+            to make the process easier.
+        </p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/modelstart.webp"
+                alt="Image showcasing the solid render and wireframe render of the legs">
+            <figcaption>
+                [ Image showcasing the solid render and wireframe render of the legs ]
+            </figcaption>
+        </figure>
+
+        <p>
+            The torso seems to be the most complicated one, so I had to download the main model for comparison. I
+            separated the main model by loose parts, and I found out the torso consist of 2-3 main parts. There are also
+            "clamping" parts too, which I didn't know about it before.
+        </p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/torsortesting.webp"
+                alt="Screenshot of the main model's torso, with 3 parts highlighted">
+            <figcaption>
+                [ Screenshot of the main model's torso, with 3 parts highlighted ]
+            </figcaption>
+        </figure>
+
+        <p>
+            As for the teeth, it is not too hard, but I had to <b>adjust the bottom jaw to be smaller than the top
+                area</b>, so that the front teeth can be shown more. For the tubes, I can use Curve Object, and that
+            should be it!
+        </p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/finalModelling.webp" alt="Screenshot of the final mech's model">
+            <figcaption>
+                [ Screenshot of the final mech's model ]
+            </figcaption>
+        </figure>
+
+        <h2 class="subheading">Texturing</h2>
+        <p>
+            I need to decide on texturing, but I want to make this quick and also not too "cheap". I did learned about
+            "Gradient texturing" but never tried to implement them, so I could give that a go as my main way on
+            texturing!
+            <br><br>
+            First off, I want to do a solid color texturing just for better visualization on what I should color. Then,
+            a quick research on the internet and I found 2 resources, one is a <a
+                href="https://itch.io/blog/797457/optimization-of-3d-texturing-for-mobile-games-definition-of-the-gradient-texturing-process-and-analysis-of-its-efficiency-and-performance-in-engine">document
+                on gradient texturing</a>, and also a <a href="https://youtu.be/9ITJgW9hVrE?si=EixeqfhoLtvXa3L2">video
+                showing how to do it</a>. For getting the texture atlas, I found this <a
+                href="https://milkandbanana.itch.io/gradient-color-pallete">free gradient color palette</a> I can start
+            with!
+        </p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/texturingtest.webp"
+                alt="Screenshot of my Blender file, gradient texturing is still work in progress">
+            <figcaption>
+                [ Screenshot of my Blender file, gradient texturing is still work in progress ]
+            </figcaption>
+        </figure>
+
+        <p>And after texturing, this is the result:</p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/finaltexturing.webp"
+                alt="Final render with gradient texture applied to Command Wolf, additional pipe added for the leg, front view and back view">
+            <figcaption>
+                [ Final render with gradient texture applied to Command Wolf, additional pipe added for the leg, front
+                view and back view ]
+            </figcaption>
+        </figure>
+
+        <p>Additional small patches include adding pipes for the legs, and fixed the topology for the ears, just a teeny
+            bit.</p>
+
+
+        <h2 class="subheading">Rigging</h2>
+
+        <p>
+            Man made horror beyond my comprehension, rigging is <b>HARD</b>.
+            <br><br>
+            I'm glad that I found this <a href="https://www.youtube.com/watch?v=3RSwjZLClRc">amazing video from
+                Doodley</a> tho, he explained rigging for casual people who aren't in the 3D fields. This video alone
+            helped me a lot on understanding how complex rigs in animated movies and video games work! I also found <a
+                href="https://www.youtube.com/watch?v=DDeB4tDVCGY">a video on rigging</a> in practice using Blender,
+            learning the theory first helped with understanding the video too! Based on the video, I used <b>Rigid
+                Rigging method</b> from Joey for my mech. It's a robot, not an organic character, therefore there's no
+            need in weight painting.
+            <br><br>
+            I started with the torso first, and then the right side of the mech. Then, I applied the symmetry function
+            from the right to the left and this is what I got!
+        </p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/riggingtest.webp"
+                alt="Screenshot of the final rig set up for the mech">
+            <figcaption>
+                [ Screenshot of the final rig set up for the mech ]
+            </figcaption>
+        </figure>
+
+        <p>
+            I use Parent to Bone method, apply this to all parts of the model, and done. Let's do a posing test.
+            <br>
+            To test on the rig's <b>usability</b>, I made a new Blender file to create a render to test on the model by
+            giving it a pose to the camera:
+        </p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/posetestrender.webp"
+                alt="Render of Command Wolf posing to the camera">
+            <figcaption>
+                [ Render of Command Wolf posing to the camera ]
+            </figcaption>
+        </figure>
+
+        <p>
+            This made me learned that posing by adjusting individual bone is <b>not worth the experience</b>. I also
+            found a lot of logic error of the model, especially on how the joint works! When I do posing, I need to
+            think about the readability of the pose. Just like in previous semester of Game Design, I can check if it's
+            readable by making it into a silhouette.
+            <br><br>
+            Another way to have better readability, according to my assessor and my friend, is to play around with
+            colors and think about the <b>Negative Space</b>, which that's very interesting.
+            <br><br>
+            Either way, to solve the issue where the animator needs to control individual bones, I need to implement a
+            <b>Control system</b>.
+        </p>
+
+        <h2 class="subheading">Controls</h2>
+
+        <p>
+            So, my goal is to make the rig <b>artist-friendly</b>, if I send this to an artist, they should know how to
+            use the rig by interacting around.
+            <br><br>
+            Controlling each bone is already a hassle and annoying, a solution I can go for is adding <b>IK</b> to the
+            legs! I learned this from <a href="https://www.youtube.com/watch?v=Y2SWwZmwrwM">a video that explains on how
+                to make a rig and also adding controls</a>! And this is the results of me adding IK:
+        </p>
+
+        <figure>
+            <video src="../assets/images/blog/commandwolf/IKworking.webm" autoplay loop muted>
+            </video>
+            <figcaption>
+                [ Video of me playing with the rig, the IK bones are now replaced with shapes ]
+            </figcaption>
+        </figure>
+
+        <p>
+            With a help from Josh (my second assessor, he's really good at Blender), and <a
+                href="https://www.youtube.com/watch?v=ktXD_WRMY8E">this video of Polyfjord rigging and animating a
+                creature</a>, I learned about <b>bone constraints</b> which can be useful for turret movement. I want
+            the base of the turret to move in Yaw rotation, and the gun move in Pitch rotation. <b>Damped Track</b> with
+            <b>Limit Rotation</b> helps with this mechanic... sort of.
+        </p>
+
+        <figure>
+            <video src="../assets/images/blog/commandwolf/turretworking.webm" autoplay loop muted>
+            </video>
+            <figcaption>
+                [ Video of me playing with the rig, now with working Turret ]
+            </figcaption>
+        </figure>
+
+        <p>
+            Just like the previous, I want to try this new rig to see if I can pose better and easier. And good news! It
+            is <b>MUCH easier to pose</b> with this set up now, I created this pose in less than 15 minutes, while for
+            the previous pose took me an hour.
+        </p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/posingtest2.webp"
+                alt="Screenshot of the wolf's new pose using the new rig set up">
+            <figcaption>
+                [ Screenshot of the wolf's new pose using the new rig set up ]
+            </figcaption>
+        </figure>
+
+        <p>
+            Time to move on to the last stage, which is...
+        </p>
+
+        <h2 class="subheading">Animating</h2>
+
+        <p>
+            I animate <b>humanoid</b> before in Roblox Studio, but I never animate a <b>quadruple</b> before, nor
+            animate using controls. It is best to get some references.
+            <br><br>
+            This is a wolf, so how does a dog/wolf run?
+            <br><br>
+            Based on <a href="https://www.youtube.com/watch?v=DmGlaKeLBVY">this video on how to animate an animal run
+                cycle</a>, I learned that there are 5-6 main stage of the animation.
+            <br><br>
+            <b>Contact, or Extension:</b> Front legs stretched forward, back legs stretched backward. Body is fully
+            extended.
+            <br>
+            <b>Going down:</b> The front legs begin absorbing impact. Spine compresses slightly downward.
+            <br>
+            <b>Passing:</b> Back legs move under the body. Front legs pull backward. Body starts lifting again.
+            <br>
+            <b>Full contraction:</b> All legs tucked closer beneath the body. <i>Apparently this is the “coiled spring”
+                pose, the back legs about to touch the ground.</i>
+            <br>
+            <b>Leap:</b> The wolf fully off the ground. Spine extends again. Front legs reaching forward/backward, while
+            the back legs pushing up.
+            <br><br>
+            Firstly, I created the main keyframes, and it looks like this:
+        </p>
+
+        <figure>
+            <video src="../assets/images/blog/commandwolf/mainkf.webm" autoplay loop muted>
+            </video>
+            <figcaption>
+                [ Video showcasing the main keyframes ]
+            </figcaption>
+        </figure>
+
+        <p>
+            Then I contract all keyframes, so that the movement can be a bit faster. I also add additional small
+            animation for the exhaust, and making the head stabilized. While animating I asked my assessors for feedback
+            so I can do iterations.
+            <br><br>
+            To make the animation more natural, I apply "noise" to the keyframes, by giving individual keys an offset:
+        </p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/noiseinanimation.webp"
+                alt="Screenshot of the keyframes with noise offsets">
+            <figcaption>
+                [ Screenshot of the keyframes with noise offsets ]
+            </figcaption>
+        </figure>
+
+        <p>
+            With a bunch of tweaks and small patches, this is the final animation!
+        </p>
+
+        <figure>
+            <video src="../assets/images/blog/commandwolf/runningraw.webm" autoplay loop muted>
+            </video>
+            <figcaption>
+                [ Video showcasing the final animation ]
+            </figcaption>
+        </figure>
+
+        <h2 class="subheading">Iteration</h2>
+
+        <p>
+            For the texture, I gathered lots of feedback, to which the majority going for the <b>warm color</b>. But in
+            the end, it's about the <b>context</b>.
+        </p>
+
+        <figure>
+            <img src="../assets/images/blog/commandwolf/feedbackontexturing.webp"
+                alt="Collage of screenshots, feedback from multiple people in different Discord server">
+            <figcaption>
+                [ Collage of screenshots, feedback from multiple people in different Discord server ]
+            </figcaption>
+        </figure>
+
+        <p>
+            Based on these feedback, I iterated the coloring a bit so it follows the <b>60/30/10 rule</b>, suggested by
+            my assessor. I even attempted to try <b>Non-Photorealism-Render</b> style suggested by Josh using Grease
+            Pencil.
+            <br>
+            Using shader graph, and new colors, this is the result:
+        </p>
+
+        <figure>
+            <video src="../assets/images/blog/commandwolf/newshaderanimation.webm" autoplay loop muted>
+            </video>
+            <figcaption>
+                [ Video showcasing the final animation with NPR shader ]
+            </figcaption>
+        </figure>
+
+        <h2 class="subheading">Environment</h2>
+
+        <p>
+            Right now the wolf is running in a void, I want to add some environments. Not only to have something
+            interesting in the background instead of a solid color, but to give a sense of <b>scale</b>. I can use the
+            environment to show how big the wolf is!
+            <br><br>
+            Since this is out of my scope, <b>I will not model the environments</b>. Instead, I will use <a
+                href="https://kenney.nl/assets">Kenney's free assets</a> available to use.
+            <br>
+            The environment must move from right to left. I have combined all assets I have placed, into one object
+            where I can animate it.
+        </p>
+
+        <figure>
+            <video src="../assets/images/blog/commandwolf/movingenvironment.webm" autoplay loop muted>
+            </video>
+            <figcaption>
+                [ Video showcasing how the environment moves in Blender ]
+            </figcaption>
+        </figure>
+
+        <p>
+            <b>But why not using Empty?</b>
+            <br>
+            That was my first initial step! To parent everything inside an empty and then use an array modify.
+            Unfortunately, Array modifier does not work with Empty, so this is my plan B.
+            <br><br>
+            Despite that the background will move quite fast, I still make sure the environment has the same shader
+            style as the wolf, using NPR, Posterizing, and Grease Pencil. <i>I am not sure if this necessary or not</i>,
+            so this is just for the sake of consistency.
+        </p>
+
+        <figure>
+            <video src="../assets/images/blog/commandwolf/shadertoenvironment.webm" autoplay loop muted>
+            </video>
+            <figcaption>
+                [ Video showing how I implement the same NPR shader to the entire environment ]
+            </figcaption>
+        </figure>
+
+        <p>
+            For the sky, I can't use a realistic skybox. I will keep the lighting but change the sky, by implementing a
+            <b>flat plane</b>, now it looks like this:
+        </p>
+
+        <figure>
+            <video src="../assets/images/blog/commandwolf/skyboxtest.webm" autoplay loop muted>
+            </video>
+            <figcaption>
+                [ Video showing how I use a flat sky plane for the background sky ]
+            </figcaption>
+        </figure>
+
+        <h2 class="subheading">Motion Blur</h2>
+
+        <p>
+            I want to experiment with motion blur, it's a cool way to create some energy and speed. Luckily this is
+            EEVEE, so I can quickly test out how motion blur would look like! I found out about <a
+                href="https://github.com/GitSauce2/selective_motion_blur">this Selective Blur plugin</a>, a plugin that
+            helps with motion blur but with a pass. Basically, I can make the robot wolf have no motion blur, while the
+            background is.
+            <br><br>
+            This helps the movement of the wolf to be more clear! The downside of this, is the render time will cost at
+            least <b>7 minutes</b>, not a big deal, just something I would like to mention.
+            <br><br>
+            And, this is the final result and <b>the final product</b>! Drum roll pleaaaase:
+        </p>
+
+        <figure>
+            <video src="../assets/images/blog/commandwolf/finalanimation.webm" autoplay loop muted>
+            </video>
+            <figcaption>
+                [ Final animation video ]
+            </figcaption>
+        </figure>
+
+        <h2 class="subheading">Reflection</h2>
+
+        <p>
+            I like how this is supposed to be a one-week project, but it leads to a one-month project.
+            <br><br>
+            This is by far the biggest personal project I have ever done and documented! I want to add some more for
+            this project, but definitely not now due to time constraints, so my journey ends here. I found modelling and animating quite relaxing, while creating the rig and texturing feels boring and mundane for me. You had to start rigging first before animating anyways, so hard work pays off! I learned a lot on this personal project, this really helps me to find something I like after using Blender for so long. This project helps me to decide that I want to become a 3D artist and I want to model more characters in the future, maybe during summer break or during the game production semester.
+            <br><br>
+            Thanks Chris for an amazing personal project!
+        </p>
+
+        <footer>
+            <h1>Written with love, Q.A &#129446</h1>
+            <p>Thanks for reading! You can go back to <a href="../blog.html">Blog</a>, if you want.</p>
+        </footer>
+    </main>
+
+    <script src="../script/blogarticle.js"></script>
+    <script src="../script/blognavigation.js"></script>
+    <script src="../script/mobilenavigation.js"></script>
+
+</body>
+
+</html>
