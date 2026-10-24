@@ -1466,7 +1466,7 @@ main:has(#music.active) {
     width: 100%;
     height: 100%;
 
-    background-image: url("/assets/images/misc/aboutmebg.png");
+    background-image: url("/assets/images/misc/aboutmebg.webp");
     background-size: cover;
     background-position: top right;
     filter: blur(5px);

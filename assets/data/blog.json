@@ -1,6 +1,6 @@
 [
     {
-        "title": "My new portfolio website",
+        "title": "Making My Portfolio Website",
         "date": "2026-10-15",
         "image": "assets/images/blog/newweb/THUMBNAIL.webp",
         "url": "blog/newweb.html",
@@ -9,7 +9,7 @@
         ]
     },
     {
-        "title": "Creating a robot wolf in Blender",
+        "title": "Recreating Command Wolf",
         "date": "2026-10-19",
         "image": "assets/images/blog/commandwolf/THUMBNAIL.webp",
         "url": "blog/commandwolf.html",

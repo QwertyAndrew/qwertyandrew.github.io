@@ -18,7 +18,7 @@
     {
         "media": "keyboard.webp",
         "title": "Keyboard",
-        "description": "That's basically my keyboard, xd.",
+        "description": "That's basically my keyboard, xddd.",
         "format": "landscape",
         "order": 3,
         "type": "image"
@@ -26,7 +26,7 @@
     {
         "media": "mossy.webp",
         "title": "Moss",
-        "description": "Photograph taken in Eindhoven, Netherland.",
+        "description": "Photograph taken in Eindhoven, the Netherlands.",
         "format": "landscape",
         "order": 4,
         "type": "image"
@@ -34,7 +34,7 @@
     {
         "media": "pipes.webp",
         "title": "Pipes",
-        "description": "Photograph taken in Eindhoven, Netherlands.",
+        "description": "Photograph taken in Eindhoven, the Netherlands.",
         "format": "landscape",
         "order": 5,
         "type": "image"
@@ -42,7 +42,7 @@
     {
         "media": "tower.webp",
         "title": "Highrise",
-        "description": "Photograph taken in Eindhoven, Netherlands.",
+        "description": "Photograph taken in Eindhoven, the Netherlands.",
         "format": "portrait",
         "order": 6,
         "type": "image"
@@ -74,7 +74,7 @@
     {
         "media": "sharp.webp",
         "title": "Sharp",
-        "description": "Photograph taken in Eindhoven, Netherland.",
+        "description": "Photograph taken in Eindhoven, the Netherlands.",
         "format": "square",
         "order": 10,
         "type": "image"
@@ -90,7 +90,7 @@
     {
         "media": "roof.webp",
         "title": "Roof",
-        "description": "Photograph taken in the Netherlands.",
+        "description": "Photograph taken in Eindhoven, the Netherlands.",
         "format": "square",
         "order": 12,
         "type": "image"
@@ -98,7 +98,7 @@
     {
         "media": "rock.webp",
         "title": "Rock",
-        "description": "Photograph taken in Lijiang, China, I think.",
+        "description": "Photograph taken in Lijiang, China.",
         "format": "landscape",
         "order": 13,
         "type": "image"
@@ -129,7 +129,7 @@
     },
     {
         "media": "mothernature.webp",
-        "title": "Mother Nature",
+        "title": "Nature",
         "description": "Photograph taken in Vietnam.",
         "format": "landscape",
         "order": 17,
@@ -154,7 +154,7 @@
     {
         "media": "catto.webp",
         "title": "Catto",
-        "description": "Photograph taken in China. Very cute stray cat.",
+        "description": "Photograph taken in China. Very cute stray cat :3",
         "format": "landscape",
         "order": 20,
         "type": "image"
@@ -162,7 +162,7 @@
     {
         "media": "caged.webp",
         "title": "Caged",
-        "description": "Photograph taken in China. Hopefully they are alright tbh.",
+        "description": "Photograph taken in China.",
         "format": "landscape",
         "order": 21,
         "type": "image"
