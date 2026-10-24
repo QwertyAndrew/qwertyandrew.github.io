@@ -106,7 +106,7 @@
     {
         "media": "resting.webp",
         "title": "Resting",
-        "description": "Photograph taken in Vietnam, an attempt to take a photo like <a href='https://en.wikipedia.org/wiki/Nurture_(album)'>Poter Robinson's Nurture Album</a>, thanks sis for being the model!",
+        "description": "Photograph taken in Vietnam, an attempt to take a photo like <a href='https://en.wikipedia.org/wiki/Nurture_(album)'>Porter Robinson's Nurture Album</a>.",
         "format": "landscape",
         "order": 14,
         "type": "image"
@@ -122,7 +122,7 @@
     {
         "media": "oldbridge.webp",
         "title": "Old Bridge",
-        "description": "Photograph taken in Vietnam, shout out to my sister for being the model.",
+        "description": "Photograph taken in Vietnam.",
         "format": "portrait",
         "order": 16,
         "type": "image"
