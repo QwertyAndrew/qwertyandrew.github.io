@@ -141,9 +141,42 @@ function calculateReadingTime() {
     readingTime.textContent = `${minutes} min read`;
 }
 
+// Create that footer part so I don't have to
+function generateBlogFooter() {
+    const article = document.querySelector(".articleBlog");
 
+    if (!article) return;
 
+    // Prevent duplicate footers
+    if (article.querySelector(".articleFooter")) return;
+
+    // Footer
+    const footer = document.createElement("footer");
+    footer.classList.add("articleFooter");
+
+    // Heading
+    const heading = document.createElement("h1");
+    heading.textContent = "Written with love, Q.A 🦦";
+
+    // Paragraph
+    const paragraph = document.createElement("p");
+    paragraph.append("Thanks for reading! You can go back to ");
+
+    // Blog link
+    const link = document.createElement("a");
+    link.href = "../blog.html";
+    link.textContent = "Blog";
+
+    paragraph.append(link, ", if you want.");
+
+    // Assemble footer
+    footer.append(heading, paragraph);
+
+    // Append to the bottom of the article
+    article.appendChild(footer);
+}
 
 calculateReadingTime();
 loadBlogArticle();
 generateBlogNavigation();
+generateBlogFooter();
