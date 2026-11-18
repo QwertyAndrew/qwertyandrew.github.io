@@ -7,7 +7,8 @@
 
     <!-- Basic metadata -->
     <title>QA's Creative Works</title>
-    <meta name="description" content="A collection of super swag things I've made, such as 3D art, music, games, photography, and silly websites." />
+    <meta name="description"
+        content="A collection of super swag things I've made, such as 3D art, music, games, photography, and silly websites." />
 
     <!-- Open Graph: Discord, Facebook, LinkedIn, etc. -->
     <meta property="og:type" content="website" />
@@ -15,7 +16,8 @@
     <!-- Blog's title, change this -->
     <meta property="og:title" content="QA's Creative Works" />
 
-    <meta property="og:description" content="A collection of super swag things I've made, such as 3D art, music, games, photography, and silly websites." />
+    <meta property="og:description"
+        content="A collection of super swag things I've made, such as 3D art, music, games, photography, and silly websites." />
     <meta property="og:image" content="https://qwertyandrew.github.io/assets/images/misc/portfolio-preview.png" />
     <meta property="og:url" content="https://qwertyandrew.github.io/" />
 
@@ -25,9 +27,10 @@
     <!-- Twitter / X card metadata -->
     <!-- Blog's title, change this -->
     <meta name="twitter:title" content="QA's Creative Works" />
-    
+
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="A collection of super swag things I've made, such as 3D art, music, games, photography, and silly websites." />
+    <meta name="twitter:description"
+        content="A collection of super swag things I've made, such as 3D art, music, games, photography, and silly websites." />
     <meta name="twitter:image" content="https://qwertyandrew.github.io/assets/images/misc/portfolio-preview.png" />
 
     <!-- Stylesheet -->
@@ -45,9 +48,7 @@
         <ul>
             <li>
                 <a href="#art" class="nav-link active">
-                    <div class="nav-link-indicator">
-                        <div class="nav-link-line"></div>
-                    </div>
+                    <div class="nav-link-indicator active"></div>
                     Works
                 </a>
 
@@ -106,38 +107,23 @@
 
     <main>
         <section id="art" class="page active">
-            <div class="art-gallery gallery"></div>
-
-            <article class="detailed"> <!-- active or not -->
-                <button class="detailed-close" aria-label="Close image">
-                    X
-                </button>
-                <div class="content-container">
-                    <div class="media-container"></div>
-
-                    <div class="text-group">
-                        <h1></h1>
-                        <p></p>
-                    </div>
-                </div>
-            </article>
+            <!-- Projects will be dynamically generated here -->
+            <div id="projects-container"></div>
+            <footer>
+                <p>FOOTER HERE</p> 
+            </footer>
         </section>
 
         <section id="photos" class="page">
-            <div class="photos-gallery gallery"></div>
-            <article class="detailed"> <!-- active or not -->
-                <button class="detailed-close" aria-label="Close image">
-                    X
-                </button>
-                <div class="content-container">
-                    <div class="media-container"></div>
+            <!-- Uhhhhhhhhhhhhhhhhhhhhhhhhhh -->
+        </section>
 
-                    <div class="text-group">
-                        <h1></h1>
-                        <p></p>
-                    </div>
-                </div>
-            </article>
+        <section id="games" class="page">
+
+        </section>
+
+        <section id="websites" class="page">
+
         </section>
 
         <section id="music" class="page">
@@ -198,25 +184,12 @@
                 </div>
             </div>
         </section>
-
-        <section id="games" class="page">
-            <div class="games-gallery gallery">
-
-            </div>
-        </section>
-
-        <section id="websites" class="page">
-            <div class="websites-gallery gallery">
-
-            </div>
-        </section>
     </main>
 
     <script src="script/indexnavigation.js"></script>
     <script src="script/mobilenavigation.js"></script>
-    <script src="script/gallery.js"></script>
     <script src="script/music.js"></script>
-    <script src="script/gameweb.js"></script>
+    <script src="script/artfetching.js"></script>
 </body>
 
 </html>

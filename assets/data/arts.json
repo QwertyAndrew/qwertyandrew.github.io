@@ -1,202 +1,271 @@
-[
-    {
-        "media": "lockscreen.webp",
-        "title": "Momentum",
-        "description": "Art created only with Figma, a small challenge I gave to myself, as part of my own study on how to use Figma.",
-        "format": "landscape",
-        "order": 1,
-        "type": "image"
-    },
-    {
-        "media": "oxy.webp",
-        "title": "Oxygen",
-        "description": "3D Art created with Blender. This was used for a short animated video <q>OxyCarb</q>.",
-        "format": "landscape",
-        "order": 1.2,
-        "type": "image"
-    },
-    {
-        "media": "temple.webp",
-        "title": "Temple",
-        "description": "3D art created with Blender.",
-        "format": "landscape",
-        "order": 2,
-        "type": "image"
-    },
-    {
-        "media": "dystop.webp",
-        "title": "Dystopian",
-        "description": "3D art created with Blender, part of my university assignment on creating a 3D environment.",
-        "format": "landscape",
-        "order": 3,
-        "type": "image"
-    },
-    {
-        "media": "connectedworld.webp",
-        "title": "Connected",
-        "description": "3D art created with Blender. This was also used as a music cover art <q>Connected World</q>.",
-        "format": "landscape",
-        "order": 4,
-        "type": "image"
-    },
-    {
-        "media": "fractalart.webp",
-        "title": "Fractal",
-        "description": "3D art created with Blender. This was also used as a music cover art <q>Corrupted Color</q>.",
-        "format": "landscape",
-        "order": 5,
-        "type": "image"
-    },
-    {
-        "media": "2024.webp",
-        "title": "Signal",
-        "description": "3D art created with Blender, heavily inspired by dullscythe music video from Porter Robinson. This was also used as a music cover art <q>2024</q>.",
-        "format": "landscape",
-        "order": 6,
-        "type": "image"
-    },
-    {
-        "media": "fall.webp",
-        "title": "Falling Falling Falling",
-        "description": "Art created with FireAlpaca, Figma and Image Pixel Sorter website.",
-        "format": "portrait",
-        "order": 7,
-        "type": "image"
-    },
-    {
-        "media": "orbwallpaper.webp",
-        "title": "Landmark",
-        "description": "3D art created with Blender.",
-        "format": "landscape",
-        "order": 8,
-        "type": "image"
-    },
-    {
-        "media": "jellyfishwallpaper.webp",
-        "title": "The Deep",
-        "description": "3D art created with Blender.",
-        "format": "landscape",
-        "order": 9,
-        "type": "image"
-    },
-    {
-        "media": "handart.webp",
-        "title": "Downfall",
-        "description": "3D art created with Blender. This was also used as a music cover art <q>City Of Mistake</q>.",
-        "format": "landscape",
-        "order": 10,
-        "type": "image"
-    },
-    {
-        "media": "frame.webp",
-        "title": "Frames",
-        "description": "3D art created with Blender. This was also used as a music cover art <q>Frames</q>.",
-        "format": "landscape",
-        "order": 11,
-        "type": "image"
-    },
-    {
-        "media": "100daysformicon.webp",
-        "title": "100 days in [form]",
-        "description": "3D art created with Blender, it's a music cover art for a 50vs50 community event.",
-        "format": "square",
-        "order": 13,
-        "type": "image"
-    },
-    {
-        "media": "samplicityicon2.webp",
-        "title": "S.G.C",
-        "description": "A compilation cover art for Samplicity special community event, where they collaborated with GenreComp event as well. This was created with Blender and Figma.",
-        "format": "square",
-        "order": 14,
-        "type": "image"
-    },
-    {
-        "media": "samplicityicon.webp",
-        "title": "samplicity",
-        "description": "A compilation cover art for Samplicity community event. This was created with Figma.",
-        "format": "square",
-        "order": 15,
-        "type": "image"
-    },
-    {
-        "media": "vacuum.webp",
-        "title": "Vacuum 3D model",
-        "description": "A low poly 3D model of a Vacuum gun. This work is used for an Edutainment VR game called <q>MiniMedicVR</q>, which was part of my internship at inMotionVR.",
-        "format": "square",
-        "order": 16,
-        "type": "image"
-    },
-    {
-        "media": "pistol.webp",
-        "title": "Pistol 3D model",
-        "description": "A low poly 3D model of a Pistol. This work is used for an Edutainment VR game called <q>MiniMedicVR</q>, which was part of my internship at inMotionVR.",
-        "format": "square",
-        "order": 17,
-        "type": "image"
-    },
-    {
-        "media": "sniper.webp",
-        "title": "Sniper 3D model",
-        "description": "A low poly 3D model of a Sniper. This work is used for an Edutainment VR game called <q>MiniMedicVR</q>, which was part of my internship at inMotionVR.",
-        "format": "landscape",
-        "order": 18,
-        "type": "image"
-    },
-    {
-        "media": "strayicon.webp",
-        "title": "Stray",
-        "description": "3D art created with Blender, FireAlpaca and Figma. This work is used for a music cover art <q>Stray</q>.",
-        "format": "square",
-        "order": 19,
-        "type": "image"
-    },
-    {
-        "media": "zackart.webp",
-        "title": "hopeful",
-        "description": "3D art created with Blender and Figma, inspired by <q>Your Name</q> and <q>Suzume</q> movie poster design.",
-        "format": "portrait",
-        "order": 20,
-        "type": "image"
-    },
-    {
-        "media": "unison.webp",
-        "title": "Unison",
-        "description": "3D art created with Blender, using basic modifiers, material shaders, compositing.",
-        "format": "landscape",
-        "order": 21,
-        "type": "image"
-    },
-    {
-        "media": "spsposter1.webp",
-        "title": "S.P.S Poster",
-        "description": "Poster design for the Exploration Department. This work is used as an advertisement material for the short film <q>Welcome to Solar Pulse Systems!</q>",
-        "format": "portrait",
-        "order": 22,
-        "type": "image"
-    },
-    {
-        "media": "environmentdesign.webp",
-        "title": "Explore",
-        "description": "Environment design for the Volume in Pixel Playground at Fontys. This work is used for the short film <q>Welcome to Solar Pulse Systems!</q>",
-        "format": "landscape",
-        "order": 23,
-        "type": "image"
-    },
-    {
-        "media": "robotwolfposter.webp",
-        "title": "Command Wolf",
-        "description": "A simple poster design made with Figma, after implementing a better rig system for the Command Wolf.",
-        "format": "portrait",
-        "order": 25,
-        "type": "image"
-    },
+
+{
+    "projects": [
         {
-        "media": "wolfieAnimation.webm",
-        "title": "Mission",
-        "description": "A one month project where I had the opportunity to refine my 3D modelling skills, by creating a robot wolf from Zoids.",
-        "format": "landscape",
-        "order": 26,
-        "type": "video"
-    }
-]
+            "title": "The Command Wolf",
+            "description": "A one-month project where I had the opportunity to practice my 3D modelling skills using Blender, by recreating a robot wolf from the Zoids Animated Series. The poster was created with Figma.",
+            "links": [
+                {
+                    "label": "Devlog",
+                    "url": "blog/commandwolf.html"
+                }
+            ],
+            "media": [
+                {
+                    "type": "video",
+                    "src": "assets/images/works/arts/wolfieAnimation.webm",
+                    "alt": "Wolfie animation"
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/robotwolfposter.webp",
+                    "alt": "Robot Wolf poster"
+                }
+            ]
+        },
+        {
+            "title": "Solar Pulse Systems",
+            "description": "A Virtual Production project from my university, where we create a short film using the Pixel Playground's Volume. I'm in charged of the environment design for the Exploration department, created with Blender and Unreal Engine.",
+            "links": [
+                {
+                    "label": "YouTube",
+                    "url": "https://www.youtube.com/watch?v=uUMHigxCLYI"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/spsposter1.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "video",
+                    "src": "assets/images/works/arts/vfxsps.webm",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/environmentdesign.webp",
+                    "alt": ""
+                }
+            ]
+        },
+        {
+            "title": "Stray",
+            "description": "This is a one week project during the summer, a 3D art created with Blender, drawing using FireAlpaca, and Figma for extra post-processing. This work is used for a music cover art!",
+            "links": [
+                {
+                    "label": "Devlog",
+                    "url": "example.com"
+                },
+                {
+                    "label": "Soundcloud",
+                    "url": "https://soundcloud.com/qwertyandrew/stray"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/strayicon.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/strayfirealpaca.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/straybts.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/straybts2.webp",
+                    "alt": ""
+                }
+            ]
+        },
+        {
+            "title": "Samplicity X GenreComp",
+            "description": "A Cover Art project for Samplicity Community event from FORM. The art was created with Blender, along side Figma for additional post-processing.",
+            "links": [
+                {
+                    "label": "YouTube",
+                    "url": "https://www.youtube.com/watch?v=9WQwbHvrmU0"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/samplicityicon2.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/samplicityicon3.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/samplicitybanner.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/samplicitybts.webp",
+                    "alt": ""
+                }
+            ]
+        },
+        {
+            "title": "100 Days In [FORM] Civilization",
+            "description": "A cover art project collaborated with Kate Chaos, created with Blender, for a 50vs50 community event in FORM.",
+            "links": [
+                {
+                    "label": "Devlog",
+                    "url": "example.com"
+                },
+                {
+                    "label": "Soundcloud",
+                    "url": "https://soundcloud.com/the-formaholics/giggleshitters-100-days-in"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/100daysformicon.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "video",
+                    "src": "assets/images/works/arts/100daysbts3.webm",
+                    "alt": ""
+                },
+                {
+                    "type": "video",
+                    "src": "assets/images/works/arts/100daysbts2.webm",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/100daysbts.webp",
+                    "alt": ""
+                }
+            ]
+        },
+        {
+            "title": "MiniMedicVR",
+            "description": "An internship project where I worked on a game about exploring the human body as a nanobot. I'm in charged of the first prototype and the overall art style of the game. I use Blender, Unity and Meta Quest 3. Sorry for the low quality videos.",
+            "devlog": "example.com",
+            "media": [
+                {
+                    "type": "video",
+                    "src": "assets/images/works/arts/neuronenvironment.webm",
+                    "alt": ""
+                },
+                {
+                    "type": "video",
+                    "src": "assets/images/works/arts/bloodenvironment.webm",
+                    "alt": ""
+                },
+                {
+                    "type": "video",
+                    "src": "assets/images/works/arts/lungenvironment.webm",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/pistol.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/vacuum.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/sniper.webp",
+                    "alt": ""
+                }
+            ]
+        },
+        {
+            "title": "Archived Artwork",
+            "description": "They are all random 3D/2D artwork I created using Blender, FireAlpaca, or even Figma.<br>Pretty old... therefore I won't be deep diving on them as much as the projects above.",
+            "media": [
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/unison.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/handart.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/fractalart.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/connectedworld.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/samplicityicon.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/jellyfishwallpaper.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/2024.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/dystop.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/fall.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/frame.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/lockscreen.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/orbwallpaper.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/oxy.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/temple.webp",
+                    "alt": ""
+                }
+            ]
+        }
+    ]
+}
