@@ -3,7 +3,6 @@
     "projects": [
         {
             "title": "The Command Wolf",
-            "role": "3D Artist",
             "description": "A one-month project where I had the opportunity to practice my 3D modelling skills using Blender, by recreating a robot wolf from the Zoids Animated Series. The poster was created with Figma.",
             "links": [
                 {
@@ -15,24 +14,34 @@
                 {
                     "type": "video",
                     "src": "assets/images/works/arts/wolfieAnimation.webm",
-                    "alt": "Wolfie animation"
+                    "alt": ""
                 },
                 {
                     "type": "image",
                     "src": "assets/images/works/arts/robotwolfposter.webp",
-                    "alt": "Robot Wolf poster"
+                    "alt": ""
+                },
+                {
+                    "type": "video",
+                    "src": "assets/images/works/arts/wolfiecolorshowcase.webm",
+                    "alt": ""
+                },
+                {
+                    "type": "video",
+                    "src": "assets/images/works/arts/wolfievisorshowcase.webm",
+                    "alt": ""
                 },
                 {
                     "type": "image",
-                    "src": "",
+                    "src": "assets/images/works/arts/WolfieBlenderBTS.webp",
                     "alt": ""
                 }
             ]
         },
         {
             "title": "Solar Pulse Systems",
-            "role": "3D Environment Artist, Video Editor, SFX Designer",
-            "description": "A Virtual Production project from my university, where we create a short film using the Pixel Playground's Volume. I'm in charged of the environment design for the Exploration department, created with Blender and Unreal Engine, video editing using Davinci Resolve.",
+            "role": "3D Environment Artist, Video Editor, VFX/SFX Designer",
+            "description": "A Virtual Production project from my university, where we create a short Sci-fi comedy film using the Pixel Playground's Volume. I'm in charged of the environment design for the Exploration department, created with Blender and Unreal Engine, video editing using Davinci Resolve.",
             "links": [
                 {
                     "label": "YouTube",
@@ -51,6 +60,11 @@
                     "alt": ""
                 },
                 {
+                    "type": "video",
+                    "src": "assets/images/works/arts/spsvideosnippet.webm",
+                    "alt": ""
+                },
+                {
                     "type": "image",
                     "src": "assets/images/works/arts/environmentdesign.webp",
                     "alt": ""
@@ -59,7 +73,6 @@
         },
         {
             "title": "Stray",
-            "role": "3D / 2D Artist",
             "description": "This is a one week project during the summer, a 3D art created with Blender, drawing using FireAlpaca, and Figma for extra post-processing. This work is used for a music cover art!",
             "links": [
                 {
@@ -96,7 +109,6 @@
         },
         {
             "title": "Samplicity X GenreComp",
-            "role": "3D Artist",
             "description": "A Cover Art project for Samplicity Community event from FORM. The art was created with Blender, along side Figma for additional post-processing.",
             "links": [
                 {
@@ -129,8 +141,7 @@
         },
         {
             "title": "100 Days In [FORM] Civilization",
-            "role": "3D Artist",
-            "description": "A cover art project collaborated with Kate Chaos, created with Blender, for a 50vs50 community event in FORM.",
+            "description": "A cover art project collaborated with Kate Chaos (she worked on the poster), created with Blender, for a 50vs50 community event in FORM.",
             "links": [
                 {
                     "label": "Devlog",
@@ -166,7 +177,7 @@
         },
         {
             "title": "Archived Artwork",
-            "description": "They are all random 3D/2D artwork I created using Blender, FireAlpaca, or even Figma.<br>Pretty old... therefore I won't be deep diving on them as much as the projects above.",
+            "description": "They are all random artwork I created using Blender, FireAlpaca, or even Figma.<br>Most of them are pretty old... therefore I won't be deep diving on them as much as the projects above.",
             "media": [
                 {
                     "type": "image",
@@ -206,11 +217,6 @@
                 {
                     "type": "image",
                     "src": "assets/images/works/arts/dystop.webp",
-                    "alt": ""
-                },
-                {
-                    "type": "image",
-                    "src": "assets/images/works/arts/fall.webp",
                     "alt": ""
                 },
                 {

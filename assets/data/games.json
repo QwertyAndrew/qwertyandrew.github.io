@@ -3,18 +3,28 @@
     "projects": [
         {
             "title": "KRAAI: Fix My Streets",
-            "role": "Art Director",
-            "description": "A Haeva Studio product, a casual puzzlee game where the player help the city by fixing real streets problem using The Netherland's Street Design Philosophy.",
+            "role": "Art Director, Animator",
+            "description": "A Haeva Studio product, a casual puzzle game where the player help the city by fixing real streets problem using The Netherland's Street Design Philosophy.",
             "links": [
                 {
                     "label": "Website",
-                    "url": ""
+                    "url": "https://haeva.studio/"
                 }
             ],
             "media": [
                 {
+                    "type": "video",
+                    "src": "assets/images/works/games/kraaitrailersnippet2.webm",
+                    "alt": ""
+                },
+                {
+                    "type": "video",
+                    "src": "assets/images/works/games/kraaitrailersnippet.webm",
+                    "alt": ""
+                },
+                {
                     "type": "image",
-                    "src": "",
+                    "src": "assets/images/works/games/kraai.webp",
                     "alt": ""
                 }
             ]

@@ -102,21 +102,25 @@
         </ul>
 
         <footer class="nav-footer">
-            <button>
-                Email
-            </button>
+            <a href="mailto:anhlequang04@gmail.com" class="mail">
+                anhlequang04@gmail.com
+            </a>
 
-            <button>
-                GitHub
-            </button>
+            <div class="socials-container">
+                <a href="https://github.com/QwertyAndrew" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <img src="assets/images/misc/github.svg" alt="">
+                </a>
 
-            <button>
-                linkedin
-            </button>
+                <a href="https://www.linkedin.com/in/le-q-034230240/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">
+                    <img src="assets/images/misc/linkedin.svg" alt="">
+                </a>
 
-            <button>
-                BlueSky
-            </button>
+                <a href="https://bsky.app/profile/qwertyandrew.bsky.social" target="_blank" rel="noopener noreferrer"
+                    aria-label="Bluesky">
+                    <img src="assets/images/misc/bsky.svg" alt="">
+                </a>
+            </div>
         </footer>
 
         <img class="navBGImage" alt="" />
@@ -204,10 +208,24 @@
         </section>
     </main>
 
+    <!-- FULLSCREEN MEDIA VIEWER -->
+    <dialog id="media-lightbox">
+
+        <button class="lightbox-close" aria-label="Close viewer">
+            &times;
+        </button>
+
+        <div class="lightbox-content">
+            <!-- Image or video gets inserted here -->
+        </div>
+
+    </dialog>
+
     <script src="script/indexnavigation.js"></script>
     <script src="script/mobilenavigation.js"></script>
     <script src="script/music.js"></script>
     <script src="script/projectfetching.js"></script>
+    <script src="script/projectlightbox.js"></script>
 </body>
 
 </html>

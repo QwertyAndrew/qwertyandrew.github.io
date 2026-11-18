@@ -83,6 +83,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                         anchor.href = link.url;
                         anchor.textContent = link.label;
+                        anchor.target = "_blank";
+                        anchor.rel = "noopener noreferrer";
 
                         linksContainer.appendChild(anchor);
 
