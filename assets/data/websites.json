@@ -1,38 +1,70 @@
-[
-    {
-        "order": 2,
-        "image": "pokemon.png",
-        "title": "Guess Dat Pokemon",
-        "description": "A web-based game where you guess a randomly chosen Pokemon.",
-        "links": [
-            {
-                "text": "Website",
-                "url": "web/guessDatPokemon/index.html"
-            }
-        ]
-    },
-    {
-        "order": 3,
-        "image": "ips.png",
-        "title": "Image Pixel Sorter",
-        "description": "A small, web-based tool for row/column pixel sorting images.",
-        "links": [
-            {
-                "text": "Website",
-                "url": "web/imagePixelSorter/index.html"
-            }
-        ]
-    },
-    {
-        "order": 1,
-        "image": "snake.png",
-        "title": "YetAnotherSnake.js",
-        "description": "A snake web game in JavaScript.",
-        "links": [
-            {
-                "text": "Website",
-                "url": "web/yetAnotherSnake/index.html"
-            }
-        ]
-    }
-]
+{
+    "projects": [
+        {
+            "title": "Guess Dat Pokemon",
+            "role": "UI Designer, Front-End Developer",
+            "description": "A web-based game where you guess a randomly chosen Pokemon. The website is Vanilla, meaning it was made using HTML, CSS and JavaScript only.",
+            "links": [
+                {
+                    "label": "Devlog",
+                    "url": ""
+                },
+                {
+                    "label": "Website",
+                    "url": "web/guessDatPokemon/index.html"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "assets/images/works/websites/pokemon.png",
+                    "alt": ""
+                }
+            ]
+        },
+        {
+            "title": "Image Pixel Sorter",
+            "role": "UI Designer, Front-End Developer",
+            "description": "A passion project for university. This website extracts an image input, and do pixel sorting based on multiple algorithms the user can pick. The website is Vanilla, meaning it was made using HTML, CSS and JavaScript only.",
+            "links": [
+                {
+                    "label": "Devlog",
+                    "url": ""
+                },
+                {
+                    "label": "Website",
+                    "url": "web/imagePixelSorter/index.html"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "assets/images/works/websites/ips.png",
+                    "alt": ""
+                }
+            ]
+        },
+        {
+            "title": "YetAnotherSnake.js",
+            "role": "UI Designer, Front-End Developer",
+            "description": "A simple snake web game created for a university assignment. The website is Vanilla, meaning it was made using HTML, CSS and JavaScript only.",
+            "links": [
+                {
+                    "label": "Devlog",
+                    "url": ""
+                },
+                {
+                    "label": "Website",
+                    "url": "web/yetAnotherSnake/index.html"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "assets/images/works/websites/snake.png",
+                    "alt": ""
+                }
+            ]
+        }
+    ]
+}

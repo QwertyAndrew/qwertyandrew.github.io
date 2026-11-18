@@ -1,98 +1,213 @@
-[
-    {
-        "order": 8,
-        "image": "tolr.png",
-        "title": "Tower of Literal Randomness",
-        "description": "A Roblox competitive multiplayer, tower platformer with random generation game, where players race upward for the highest score. Also a love letter to math.random().",
-        "links": [
-            {
-                "text": "Roblox",
-                "url": "https://www.roblox.com/games/80809896342264/Tower-of-Literal-Randomness"
-            }
-        ]
-    },
-    {
-        "order": 5,
-        "image": "bronzeridge.png",
-        "title": "The Night Train: Bronzeridge",
-        "description": "A showcase experience made in Roblox, based off The Night Train, canonically depicting the station of Bronzeridge.",
-        "links": [
-            {
-                "text": "Roblox",
-                "url": "https://www.roblox.com/games/135085261442408/The-Night-Train-Bronzeridge"
-            }
-        ]
-    },
-    {
-        "order": 4,
-        "image": "train.png",
-        "title": "The Night Train",
-        "description": "A showcase experience made in Roblox depicting a metro train, inspired by the Netherland's NS train and Hong Kong's MTR interior design.",
-        "links": [
-            {
-                "text": "Roblox",
-                "url": "https://www.roblox.com/games/7400709282/The-Night-Train"
-            }
-        ]
-    },
-    {
-        "order": 3,
-        "image": "apt.png",
-        "title": "The Apartment",
-        "description": "A showcase experience made in Roblox, mainly on the interior design of an apartment, inspired by the book Kitchen by Mahoko Yoshimoto.",
-        "links": [
-            {
-                "text": "Roblox",
-                "url": "https://www.roblox.com/games/8575989077/The-Apartment"
-            }
-        ]
-    },
-    {
-        "order": 6,
-        "image": "fourwing.png",
-        "title": "FourWing",
-        "description": "A showcase experience made in Roblox, present a chaotic dynamical systems with audio-play, inspired by Elttob's Generative Music.",
-        "links": [
-            {
-                "text": "Roblox",
-                "url": "https://www.roblox.com/games/125399063910160/FourWing"
-            }
-        ]
-    },
-    {
-        "order": 2,
-        "image": "wave.png",
-        "title": "wave.wav",
-        "description": "A feature showcase made in Roblox, this feature is now implemented in The Apartment. It's a sound visualizer based from the game Drive World.",
-        "links": [
-            {
-                "text": "Roblox",
-                "url": "https://www.roblox.com/games/17318530194/wave-wav"
-            }
-        ]
-    },
-    {
-        "order": 1,
-        "image": "rain.png",
-        "title": "rain.mp4",
-        "description": "A feature showcase made in Roblox, this feature is now implemented in The Night Train. It's a rain droplet on glass VFX, inspired by Z0LL's droplets effect in Shanyue.",
-        "links": [
-            {
-                "text": "Roblox",
-                "url": "https://www.roblox.com/games/15165764038/rain-mp4"
-            }
-        ]
-    },
-    {
-        "order": 7,
-        "image": "doggone.png",
-        "title": "Doggone",
-        "description": "A 2.5D local co-op platformer, play as 2 different dogs, solving puzzles using their own features / abilities.",
-        "links": [
-            {
-                "text": "itch.io",
-                "url": "https://qwertyandrew.itch.io/doggone"
-            }
-        ]
-    }
-]
+
+{
+    "projects": [
+        {
+            "title": "KRAAI: Fix My Streets",
+            "role": "Art Director",
+            "description": "A Haeva Studio product, a casual puzzlee game where the player help the city by fixing real streets problem using The Netherland's Street Design Philosophy.",
+            "links": [
+                {
+                    "label": "Website",
+                    "url": ""
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "",
+                    "alt": ""
+                }
+            ]
+        },
+        {
+            "title": "Tower Of Literal Randomness",
+            "role": "Project Lead, UI Designer, Music Producer, SFX Designer",
+            "description": "A summer game project with friends. A Roblox competitive multiplayer, tower platformer with random generation game, where players race upward for the highest score.<br>Created using Roblox Studio, Blender for 3D models, Figma for UI, and FL Studio for Music/SFX.",
+            "links": [
+                {
+                    "label": "Devlog",
+                    "url": ""
+                },
+                {
+                    "label": "Roblox",
+                    "url": "https://www.roblox.com/games/80809896342264/Tower-of-Literal-Randomness"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "assets/images/works/games/tolr.png",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "",
+                    "alt": ""
+                }
+            ]
+        },
+        {
+            "title": "MiniMedicVR",
+            "role": "Game Developer, Art Director",
+            "description": "An internship project where I worked on a game about exploring the human body as a nanobot. I'm in charged of the first prototype and the overall art style of the game. I use Blender, Unity and Meta Quest 3.",
+            "links":[
+                {
+                    "label": "Devlog",
+                    "url": "example.com"
+                },
+                {
+                    "label": "Video",
+                    "url": "example.com"
+                },
+                {
+                    "label": "GitHub",
+                    "url": "example.com"
+                }
+            ],
+            "media": [
+                {
+                    "type": "video",
+                    "src": "assets/images/works/arts/neuronenvironment.webm",
+                    "alt": ""
+                },
+                {
+                    "type": "video",
+                    "src": "assets/images/works/arts/bloodenvironment.webm",
+                    "alt": ""
+                },
+                {
+                    "type": "video",
+                    "src": "assets/images/works/arts/lungenvironment.webm",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/pistol.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/vacuum.webp",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "assets/images/works/arts/sniper.webp",
+                    "alt": ""
+                }
+            ]
+        },
+        {
+            "title": "Doggone",
+            "role": "Environment Designer, Game Designer, 3D Artist",
+            "description": "This is a university duo project, A 2.5D local co-op platformer, play as 2 different dogs, solving puzzles using their own features / abilities. The game was created using Unity, 3D assets using Blender and Kenneys",
+            "links": [
+                {
+                    "label": "Trailer",
+                    "url": ""
+                },
+                {
+                    "label": "itch.io",
+                    "url": ""
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "assets/images/works/games/doggone.png",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "",
+                    "alt": ""
+                }
+            ]
+        },
+        {
+            "title": "The Night Train",
+            "role": "UI Designer, Music Producer, VFX Artist",
+            "description": "A Roblox Showcase / Hang out Experience , depicting a metro train environment. The game inspired by the Netherland's NS train and Hong Kong's MTR interior design. This project was created in Roblox Studio, while the Music and SFX were created using FL Studio.",
+            "links": [
+                {
+                    "label": "Roblox",
+                    "url": "example.com"
+                },
+                {
+                    "label": "Music",
+                    "url": "example.com"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "assets/images/works/games/train.png",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "",
+                    "alt": ""
+                }
+            ]
+        },
+        {
+            "title": "The Night Train: Bronzeridge",
+            "role": "UI Designer, Music Producer",
+            "description": "A small showcase experience created in Roblox, based off The Night Train. This experience canonically depicting the station of Bronzeridge. The game was created using Roblox Studio, while the music and SFX were created using FL Studio.",
+            "links": [
+                {
+                    "label": "Roblox",
+                    "url": "example.com"
+                },
+                {
+                    "label": "Music",
+                    "url": "example.com"
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "assets/images/works/games/bronzeridge.png",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "",
+                    "alt": ""
+                }
+            ]
+        },
+        {
+            "title": "The Apartment",
+            "role": "Project Lead, UI Designer, 3D Artist, Music Producer, Animator, Game Developer",
+            "description": "A Roblox Showcase / Hang out Experience. This is part of my high school literature assignment, inspired by the book Kitchen, written by Mahoko Yoshimoto. This experience was created using Roblox Studio, while the music and SFX were created using FL Studio.",
+            "links": [
+                {
+                    "label": "Roblox",
+                    "url": "example.com"
+                },
+                {
+                    "label": "Video",
+                    "url": "example.com"
+                },
+                {
+                    "label": "Music",
+                    "url": ""
+                }
+            ],
+            "media": [
+                {
+                    "type": "image",
+                    "src": "assets/images/works/games/apt.png",
+                    "alt": ""
+                },
+                {
+                    "type": "image",
+                    "src": "",
+                    "alt": ""
+                }
+            ]
+        }
+    ]
+}

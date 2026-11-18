@@ -252,6 +252,15 @@ nav ul {
     transform: translate(0.5vmin, 0.25vmin);
 }
 
+.nav-footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: blue;
+    left: 0;
+}
+
 .line {
     position: absolute;
     top: 0;
@@ -293,31 +302,44 @@ main>.page {
 }
 
 /* Art Photos Games Websites */
-.project{
+.project {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10vmin;
+    margin-bottom: 2.5vmin;
 
     scroll-snap-align: start;
 }
 
 /* PROJECT TITLE HERE */
-.project > h1{
+.project>h1 {
     font-family: "forcedsquare";
     font-size: var(--font-xl);
     color: var(--primary);
     font-weight: 100;
     padding-top: 2vmin;
     padding-left: 4vmin;
+    /* line-height: var(--line-height-tight); */
 }
 
-.project > p{
+.project>p:not(.role) {
     font-family: "lexend";
     font-size: var(--font-sm);
     font-weight: 100;
     color: var(--text);
     padding-left: 4vmin;
-    width: 50%;
+    width: 70%;
+    line-height: var(--line-height-body);
+    /* padding-top: 1vmin; */
+}
+
+.role {
+    font-family: "lexend";
+    font-size: var(--font-xs);
+    font-weight: bolder;
+    color: var(--secondary);
+    padding-left: 4vmin;
+    line-height: var(--line-height-body);
+    margin-top: -0.5vmin;
 }
 
 
@@ -348,10 +370,10 @@ main>.page {
     overflow-x: auto;
     overflow-y: hidden;
 
-    padding: 2vmin 4vmin ;
+    padding: 2vmin 4vmin;
     scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    scroll-padding-left: 4vmin;
+    /* scroll-snap-type: x proximity; */
+    /* scroll-padding-left: 4vmin; */
 }
 
 
@@ -370,10 +392,10 @@ main>.page {
 
 /* INDIVIDUAL IMAGE */
 .clickable-media {
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
 
     flex: 0 0 auto;
-    height: 50vmin;
+    height: 40vmin;
 
     position: relative;
     cursor: pointer;
@@ -390,8 +412,8 @@ main>.page {
 }
 
 /* MEDIA ITSELF */
-.clickable-media > img,
-.clickable-media > video {
+.clickable-media>img,
+.clickable-media>video {
     display: block;
     height: 100%;
     width: auto;

@@ -3,11 +3,12 @@
     "projects": [
         {
             "title": "The Command Wolf",
+            "role": "3D Artist",
             "description": "A one-month project where I had the opportunity to practice my 3D modelling skills using Blender, by recreating a robot wolf from the Zoids Animated Series. The poster was created with Figma.",
             "links": [
                 {
                     "label": "Devlog",
-                    "url": "blog/commandwolf.html"
+                    "url": "fieldnotes/commandwolf.html"
                 }
             ],
             "media": [
@@ -20,12 +21,18 @@
                     "type": "image",
                     "src": "assets/images/works/arts/robotwolfposter.webp",
                     "alt": "Robot Wolf poster"
+                },
+                {
+                    "type": "image",
+                    "src": "",
+                    "alt": ""
                 }
             ]
         },
         {
             "title": "Solar Pulse Systems",
-            "description": "A Virtual Production project from my university, where we create a short film using the Pixel Playground's Volume. I'm in charged of the environment design for the Exploration department, created with Blender and Unreal Engine.",
+            "role": "3D Environment Artist, Video Editor, SFX Designer",
+            "description": "A Virtual Production project from my university, where we create a short film using the Pixel Playground's Volume. I'm in charged of the environment design for the Exploration department, created with Blender and Unreal Engine, video editing using Davinci Resolve.",
             "links": [
                 {
                     "label": "YouTube",
@@ -52,6 +59,7 @@
         },
         {
             "title": "Stray",
+            "role": "3D / 2D Artist",
             "description": "This is a one week project during the summer, a 3D art created with Blender, drawing using FireAlpaca, and Figma for extra post-processing. This work is used for a music cover art!",
             "links": [
                 {
@@ -88,6 +96,7 @@
         },
         {
             "title": "Samplicity X GenreComp",
+            "role": "3D Artist",
             "description": "A Cover Art project for Samplicity Community event from FORM. The art was created with Blender, along side Figma for additional post-processing.",
             "links": [
                 {
@@ -120,6 +129,7 @@
         },
         {
             "title": "100 Days In [FORM] Civilization",
+            "role": "3D Artist",
             "description": "A cover art project collaborated with Kate Chaos, created with Blender, for a 50vs50 community event in FORM.",
             "links": [
                 {
@@ -150,43 +160,6 @@
                 {
                     "type": "image",
                     "src": "assets/images/works/arts/100daysbts.webp",
-                    "alt": ""
-                }
-            ]
-        },
-        {
-            "title": "MiniMedicVR",
-            "description": "An internship project where I worked on a game about exploring the human body as a nanobot. I'm in charged of the first prototype and the overall art style of the game. I use Blender, Unity and Meta Quest 3. Sorry for the low quality videos.",
-            "devlog": "example.com",
-            "media": [
-                {
-                    "type": "video",
-                    "src": "assets/images/works/arts/neuronenvironment.webm",
-                    "alt": ""
-                },
-                {
-                    "type": "video",
-                    "src": "assets/images/works/arts/bloodenvironment.webm",
-                    "alt": ""
-                },
-                {
-                    "type": "video",
-                    "src": "assets/images/works/arts/lungenvironment.webm",
-                    "alt": ""
-                },
-                {
-                    "type": "image",
-                    "src": "assets/images/works/arts/pistol.webp",
-                    "alt": ""
-                },
-                {
-                    "type": "image",
-                    "src": "assets/images/works/arts/vacuum.webp",
-                    "alt": ""
-                },
-                {
-                    "type": "image",
-                    "src": "assets/images/works/arts/sniper.webp",
                     "alt": ""
                 }
             ]

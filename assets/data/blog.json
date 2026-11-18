@@ -2,8 +2,8 @@
     {
         "title": "Making My Portfolio Website",
         "date": "2026-10-15",
-        "image": "assets/images/blog/newweb/THUMBNAIL.webp",
-        "url": "blog/newweb.html",
+        "image": "assets/images/fieldnotes/newweb/THUMBNAIL.webp",
+        "url": "fieldnotes/newweb.html",
         "tags": [
             "Web Development"
         ]
@@ -11,8 +11,8 @@
     {
         "title": "Recreating Command Wolf",
         "date": "2026-10-19",
-        "image": "assets/images/blog/commandwolf/THUMBNAIL.webp",
-        "url": "blog/commandwolf.html",
+        "image": "assets/images/fieldnotes/commandwolf/THUMBNAIL.webp",
+        "url": "fieldnotes/commandwolf.html",
         "tags": [
             "Modelling",
             "Rigging",

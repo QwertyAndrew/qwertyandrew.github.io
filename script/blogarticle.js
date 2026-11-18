@@ -164,10 +164,10 @@ function generateBlogFooter() {
 
     // Blog link
     const link = document.createElement("a");
-    link.href = "../blog.html";
-    link.textContent = "Blog";
+    link.href = "../fieldnotes.html";
+    link.textContent = "Fieldnotes";
 
-    paragraph.append(link, ", if you want.");
+    paragraph.append(link, ", or look around!");
 
     // Assemble footer
     footer.append(heading, paragraph);
